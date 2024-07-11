@@ -54,6 +54,11 @@
     <None Remove="Icons\Item\OoT3D_Magic_Bean_Icon.png" />
     <None Remove="Icons\Item\OoT3D_Magic_Bean_Icon_Disabled.png" />
     <None Remove="Icons\Item\OoT3D_Small_Key_Icon_Disabled.png" />
+    <None Remove="Icons\Other\HeartPiece1Half.png" />
+    <None Remove="Icons\Other\HeartPiece1Quarter.png" />
+    <None Remove="Icons\Other\HeartPiece3Thirds.png" />
+    <None Remove="Icons\Other\HeartPieceFull.png" />
+    <None Remove="Icons\Other\NoHeartPiece.png" />
     <None Remove="Icons\Quest\OoT3D_Fire_Medallion_Icon.png" />
     <None Remove="Icons\Quest\OoT3D_Fire_Medallion_Icon_Disabled.png" />
     <None Remove="Icons\Quest\OoT3D_Forest_Medallion_Icon.png" />
@@ -121,6 +126,7 @@
     <None Remove="Icons\Upgrade\OoT3D_Silver_Scale_Icon_Disabled.png" />
     <None Remove="Images\OoTTrackerGear.png" />
     <None Remove="Images\OoTTrackerItems+Songs.png" />
+    <None Remove="Images\OoTTrackerQuest.png" />
     <None Update="HowToUse.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -257,6 +263,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icons\Item\OoT3D_Small_Key_Icon_Disabled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\HeartPiece1Half.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\HeartPiece1Quarter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\HeartPiece3Thirds.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\HeartPieceFull.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\NoHeartPiece.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icons\Quest\OoT3D_Fire_Medallion_Icon.png">
@@ -647,19 +668,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Remove="Images\OoTTrackerOther.png" />
-    <Content Include="Images\OoTTrackerOther.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Semver" Version="2.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Icons\Other" />
   </ItemGroup>
 
   <ItemGroup>
@@ -740,6 +754,9 @@
   <ItemGroup>
     <Content Include="Fonts\FOT-Chiaro-Std-B.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OoTTrackerQuest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

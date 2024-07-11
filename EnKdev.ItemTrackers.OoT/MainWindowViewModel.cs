@@ -250,6 +250,9 @@ public partial class MainWindowViewModel : ObservableRecipient
     [ObservableProperty] 
     private string _shardImage;
 
+    [ObservableProperty]
+    private string _heartPiece;
+
     #endregion
 
     #region Song Images
@@ -552,7 +555,7 @@ public partial class MainWindowViewModel : ObservableRecipient
     private string _dungeonBackground;
 
     [ObservableProperty]
-    private string _otherBackground;
+    private string _questBackground;
 
     #endregion
 
@@ -590,6 +593,8 @@ public partial class MainWindowViewModel : ObservableRecipient
 
     private int _hookState;
 
+    private int _hpProg;
+    
     private TrackerData? _trackerData;
 
     private const int MaxForestKeysVanilla = 5;
@@ -672,7 +677,7 @@ public partial class MainWindowViewModel : ObservableRecipient
 		ItemBackground = Constants.ItemBg;
         GearBackground = Constants.GearBg;
         DungeonBackground = Constants.DungeonBg;
-        OtherBackground = Constants.OtherBg;
+        QuestBackground = Constants.QuestBg;
 
         KokiriEmeraldImage = Constants.DisabledStones[0];
         GoronRubyImage = Constants.DisabledStones[1];
@@ -709,6 +714,7 @@ public partial class MainWindowViewModel : ObservableRecipient
 
         GerudoTokenImage = Constants.DisabledOther[0];
         ShardImage = Constants.DisabledOther[1];
+        HeartPiece = Constants.HeartPieceProgression[0];
 
         LullabyImage = Constants.DisabledSongs[0];
         EponaImage = Constants.DisabledSongs[1];
@@ -1715,6 +1721,32 @@ public partial class MainWindowViewModel : ObservableRecipient
                     ? Constants.AdultTradingItemsDisabled[2]
                     : Constants.AdultTradingItemsEnabled[2];
                 Logger.LogInteraction(nameof(CojiroImage));
+                break;
+        }
+    }
+
+    [RelayCommand]
+    private void ProgressHeartPiece()
+    {
+        Logger.LogCommand(nameof(ProgressHeartPieceCommand));
+
+        switch (_hpProg)
+        {
+            case 0: // No heart pieces
+                HeartPiece = Constants.HeartPieceProgression[1];
+                _hpProg++;
+                break;
+            case 1: // 1 Heart Piece
+                HeartPiece = Constants.HeartPieceProgression[2];
+                _hpProg++;
+                break;
+            case 2: // 2 Heart Pieces
+                HeartPiece = Constants.HeartPieceProgression[3];
+                _hpProg++;
+                break;
+            case 3: // 3 Heart Pieces
+                HeartPiece = Constants.HeartPieceProgression[0];
+                _hpProg = 0;
                 break;
         }
     }

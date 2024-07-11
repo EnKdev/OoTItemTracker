@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnKdev.ItemTrackers.OoT"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="1260" Width="1650" Background="Black" Foreground="White"
+        Title="{Binding Title}" Height="1089" Width="719" Background="Black" Foreground="White"
         ResizeMode="NoResize">
     <Window.DataContext>
         <local:MainWindowViewModel/>

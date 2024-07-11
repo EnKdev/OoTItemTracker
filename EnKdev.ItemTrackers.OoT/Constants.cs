@@ -11,7 +11,7 @@ public static class Constants
     public const string ItemBg = "pack://application:,,,/Images/OoTTrackerItems.png";
     public const string GearBg = "pack://application:,,,/Images/OoTTrackerGear.png";
     public const string DungeonBg = "pack://application:,,,/Images/OoTTrackerDungeons.png";
-    public const string OtherBg = "pack://application:,,,/Images/OoTTrackerOther.png";
+    public const string QuestBg = "pack://application:,,,/Images/OoTTrackerQuest.png";
 
     public static readonly List<string> DungeonLocations =
     [
@@ -45,6 +45,14 @@ public static class Constants
         "???",
         "VANILLA",
         "MQ"
+    ];
+
+    public static readonly List<string> HeartPieceProgression =
+    [
+	    "pack://application:,,,/Icons/Other/NoHeartPiece.png",
+	    "pack://application:,,,/Icons/Other/HeartPiece1Quarter.png",
+	    "pack://application:,,,/Icons/Other/HeartPiece1Half.png",
+	    "pack://application:,,,/Icons/Other/HeartPiece3Thirds.png"
     ];
 
     public static readonly List<string> DisabledStones =
