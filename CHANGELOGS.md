@@ -1,5 +1,8 @@
 # EnKdevs Ocarina of Time/Majora's Mask Tracker Changelogs
 
+## OoT Rando Tracker Changelog
+
+---
 
 1.0.5-dev
 - Removed dev progress trackers
@@ -92,7 +95,15 @@
 2.1.0
 - Internal reworks
 
+3.0.0-build.1+c77698
+- Moved to different versioning scheme
+- Redesigned the entire UI
+- Rearranged quest progression related things
+- Added new assets for Heart Containers and Heart Pieces
+
 ---
 
-1.0.0-mmDev+build.1:
+## MM Rando Tracker Changelog
+
+1.0.0-build.1+16f4f58:
 - TBA
