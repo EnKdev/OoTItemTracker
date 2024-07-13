@@ -6,7 +6,7 @@ namespace EnKdev.ItemTrackers.OoT;
 
 public static class Constants
 {
-    public static readonly string AppTitle = Versioner.VersionString("EnKdevs Ocarina of Time Item Tracker", 2, 1, 0);
+    public static readonly string AppTitle = Versioner.VersionString("EnKdevs Ocarina of Time Item Tracker", 3, 0, 0, "build.1", "c77698");
 
     public const string ItemBg = "pack://application:,,,/Images/OoTTrackerItems.png";
     public const string GearBg = "pack://application:,,,/Images/OoTTrackerGear.png";
@@ -54,6 +54,9 @@ public static class Constants
 	    "pack://application:,,,/Icons/Other/HeartPiece1Half.png",
 	    "pack://application:,,,/Icons/Other/HeartPiece3Thirds.png"
     ];
+
+    public const string HeartContainer = "pack://application:,,,/Icons/Other/OoT3D_Heart_Container_Icon.png";
+    public const string HeartPiece = "pack://application:,,,/Icons/Other/OoT3D_Piece_of_Heart_Icon.png";
 
     public static readonly List<string> DisabledStones =
     [

@@ -39,42 +39,146 @@
                 </Image.InputBindings>
             </Image>
             <TextBlock Text="{Binding GsTokens}" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-195, 111, 0, 0"></TextBlock>
-            <Image Source="{Binding HeartPiece}" Width="105" Margin="-20, -155, 0, 0">
-                <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ProgressHeartPieceCommand}"/>
-                </Image.InputBindings>
-            </Image>
             <!-- Medallions and Stones -->
             <Image Source="{Binding LightMedallionImage}" Width="40" Margin="257, -165, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ToggleLightMedallionCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLightLocationCommand}"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding ForestMedallionImage}" Width="40" Margin="345, -115, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ToggleForestMedallionCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetForestLocationCommand}"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding FireMedallionImage}" Width="40" Margin="345, -15, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ToggleFireMedallionCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetFireLocationCommand}"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding WaterMedallionImage}" Width="40" Margin="258, 35, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ToggleWaterMedallionCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetWaterLocationCommand}"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding SpiritMedallionImage}" Width="40" Margin="170, -15, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSpiritMedallionCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetSpiritLocationCommand}"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding ShadowMedallionImage}" Width="40" Margin="170, -115, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ToggleShadowMedallionCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetShadowLocationCommand}"/>
                 </Image.InputBindings>
             </Image>
+            <Image Source="{Binding KokiriEmeraldImage}" Width="40" Margin="165, 205, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEmeraldCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetEmeraldLocationCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding GoronRubyImage}" Width="40" Margin="258, 205, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleGoronRubyCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetRubyLocationCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ZoraSapphireImage}" Width="40" Margin="345, 205, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleZorasSapphireCommand}"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetSapphireLocationCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <!-- Songs -->
+            <Image Source="{Binding LullabyImage}" Width="50" Margin="-335, 125, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleZeldasLullabyCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding EponaImage}" Width="50" Margin="-335, 190, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEponasSongCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SariaImage}" Width="50" Margin="-335, 255, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSariasSongCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SunsImage}" Width="50" Margin="-225, 125, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSunsSongCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SotImage}" Width="50" Margin="-225, 190, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongOfTimeCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SosImage}" Width="50" Margin="-225, 255, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongOfStormsCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding MinuetImage}" Width="50" Margin="-115, 125, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMinuetCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding BoleroImage}" Width="50" Margin="-115, 190, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBoleroCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SerenadeImage}" Width="50" Margin="-115, 255, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSerenadeCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding RequiemImage}" Width="50" Margin="-5, 125, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleRequiemCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding NocturneImage}" Width="50" Margin="-5, 190, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleNocturneCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding PreludeImage}" Width="50" Margin="-5, 255, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding TogglePreludeCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <!-- Location Infos -->
+            <TextBlock Text="{Binding Location1}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, 250, 0, 0"/>
+            <TextBlock Text="{Binding Location2}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="255, 250, 0, 0"/>
+            <TextBlock Text="{Binding Location3}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="345, 250, 0, 0"/>
+            <TextBlock Text="{Binding Location4}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="255, -215, 0, 0"/>
+            <TextBlock Text="{Binding Location5}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="345, -165, 0, 0"/>
+            <TextBlock Text="{Binding Location6}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="345, -65, 0, 0"/>
+            <TextBlock Text="{Binding Location7}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="255, -15, 0, 0"/>
+            <TextBlock Text="{Binding Location8}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, -65, 0, 0"/>
+            <TextBlock Text="{Binding Location9}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, -165, 0, 0"/>
+            <!-- Heart Containers, Heart Pieces -->
+            <Image Source="{Binding HeartPiece}" Width="105" Margin="-20, -155, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ProgressHeartPieceCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <TextBlock Text="{Binding HeartContainerCount}" Width="20" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-255, 173, 0, 0"/>
+            <Image Source="{Binding HeartContainer}" Width="40" Margin="-335, 30, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseHeartContainerCountCommand}"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding HpIcon}" Width="40" Margin="-125, 30, 0, 0"/>
+            <TextBlock Text="{Binding HeartPieceCount}" Width="20" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-45, 173, 0, 0"/>
         </Grid>
         <Grid Row="1" Column="0">
             <Image Source="{Binding GearBackground}" Height="350"/>

@@ -116,6 +116,12 @@ public partial class MainWindowViewModel : ObservableRecipient
     [ObservableProperty]
     private int _gtgKeyCount;
 
+    [ObservableProperty]
+    private int _heartContainerCount;
+
+    [ObservableProperty]
+    private int _heartPieceCount;
+
     #endregion
 
     #region Colors
@@ -252,6 +258,12 @@ public partial class MainWindowViewModel : ObservableRecipient
 
     [ObservableProperty]
     private string _heartPiece;
+
+    [ObservableProperty]
+    private string _heartContainer;
+
+    [ObservableProperty]
+    private string _hpIcon;
 
     #endregion
 
@@ -594,6 +606,9 @@ public partial class MainWindowViewModel : ObservableRecipient
     private int _hookState;
 
     private int _hpProg;
+
+    private int _maxHeartContainers = 8;
+    private int _maxHeartPieces = 36;
     
     private TrackerData? _trackerData;
 
@@ -678,6 +693,11 @@ public partial class MainWindowViewModel : ObservableRecipient
         GearBackground = Constants.GearBg;
         DungeonBackground = Constants.DungeonBg;
         QuestBackground = Constants.QuestBg;
+        HeartContainer = Constants.HeartContainer;
+        HpIcon = Constants.HeartPiece;
+
+        HeartContainerCount = 0;
+        HeartPieceCount = 0;
 
         KokiriEmeraldImage = Constants.DisabledStones[0];
         GoronRubyImage = Constants.DisabledStones[1];
@@ -1749,6 +1769,8 @@ public partial class MainWindowViewModel : ObservableRecipient
                 _hpProg = 0;
                 break;
         }
+
+        IncreaseHeartPieceCount();
     }
 
     [RelayCommand]
@@ -3619,6 +3641,10 @@ public partial class MainWindowViewModel : ObservableRecipient
         {
             File.Delete($"./trackerState");
         }
+    }
+
+    private void IncreaseHeartPieceCount()
+    {
     }
     
     #endregion

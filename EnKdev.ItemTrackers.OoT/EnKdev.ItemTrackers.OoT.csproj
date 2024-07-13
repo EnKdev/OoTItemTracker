@@ -59,6 +59,8 @@
     <None Remove="Icons\Other\HeartPiece3Thirds.png" />
     <None Remove="Icons\Other\HeartPieceFull.png" />
     <None Remove="Icons\Other\NoHeartPiece.png" />
+    <None Remove="Icons\Other\OoT3D_Heart_Container_Icon.png" />
+    <None Remove="Icons\Other\OoT3D_Piece_of_Heart_Icon.png" />
     <None Remove="Icons\Quest\OoT3D_Fire_Medallion_Icon.png" />
     <None Remove="Icons\Quest\OoT3D_Fire_Medallion_Icon_Disabled.png" />
     <None Remove="Icons\Quest\OoT3D_Forest_Medallion_Icon.png" />
@@ -278,6 +280,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icons\Other\NoHeartPiece.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\OoT3D_Heart_Container_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\OoT3D_Piece_of_Heart_Icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icons\Quest\OoT3D_Fire_Medallion_Icon.png">
