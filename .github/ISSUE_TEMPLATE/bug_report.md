@@ -17,4 +17,4 @@ Tell me what you did to make this bug happen. Do keep it short and simple though
 A clear and concise description of what you expected to happen.
 
 **Additional context**
-What sort of tracker are you using? Which version did it happen in? (Look at the title of the app if you don't know where the Version is. Usually, this looks like V1.0.0+ocarina or V1.0.3+majora)
+What sort of tracker are you using? Which version did it happen in? (Look at the title of the app if you don't know where the Version is.)
