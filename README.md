@@ -1,15 +1,16 @@
 # EnKdevs Ocarina of Time/Majora's Mask Trackers
 Two Trackers written in C# and XAML.
 
-Current Version (OoT): <b>3.0.0-build.1+c77698</b><br/>
+Current Version (OoT): <b>3.0.0-build.2+e5fb18</b><br/>
 Current Version (MM): <b>Not started yet</b>
 
-Next Version (OoT): <b>3.0.0-build.2+e5fb18</b><br/>
+Next Version (OoT): <b>3.0.0-build.3+113c1d8</b><br/>
 Next Version (MM): <b>1.0.0-build.1+16f4f58</b>
 <br/>
 
-### On plan for 3.0.0-build.2+e5fb18 (OoT):
+### On plan for 3.0.0-build.3+113c1d8 (OoT):
 - More UI rearrangements.
+- Code refactoring
 
 ### On plan for 1.0.0-build.1+16f4f58 (MM):
 - Designing the UI screens (Masks, Dungeons, Items, Quest)
@@ -26,18 +27,16 @@ Next Version (MM): <b>1.0.0-build.1+16f4f58</b>
 Tools Used:
 
 - Visual Studio 2022 Community
-- JetBrains ReSharper 2023.3.4
-- JetBrains Rider 2024.1 RC
-
-IDE used for the code: JetBrains Rider 2024
-
-IDE used for UI Work: Visual Studio 2022 Community
+- JetBrains ReSharper 2024.1.4
+- JetBrains Rider 2024.1.4<br/><br/>
+- IDE used for the code: JetBrains Rider 2024.1.4
+- IDE used for UI Work: Visual Studio 2022 Community
 
 ---
 
 ### Requirements:
 
-- [.NET 7 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 ---
 

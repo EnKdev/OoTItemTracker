@@ -736,6 +736,9 @@ public partial class MainWindowViewModel : ObservableRecipient
         ShardImage = Constants.DisabledOther[1];
         HeartPiece = Constants.HeartPieceProgression[0];
 
+        ChildTradeItemImage = Constants.ChildTradingItemsDisabled[0];
+        AdultTradeItemImage = Constants.AdultTradingItemsDisabled[0];
+
         LullabyImage = Constants.DisabledSongs[0];
         EponaImage = Constants.DisabledSongs[1];
         SariaImage = Constants.DisabledSongs[2];
@@ -1695,7 +1698,9 @@ public partial class MainWindowViewModel : ObservableRecipient
         Logger.LogInteraction(nameof(ShardImage));
     }
 
-    [RelayCommand]
+	// TODO: Remove singular adult trade item commands and unify them into one singular progression command
+
+	[RelayCommand]
     private void ToggleEgg(string age)
     {
         Logger.LogCommand(nameof(ToggleEggCommand));
@@ -1806,6 +1811,8 @@ public partial class MainWindowViewModel : ObservableRecipient
                 break;
         }
     }
+
+    // TODO: Remove singular adult trade item commands and unify them into one singular progression command
 
     [RelayCommand]
     private void ToggleOddMushroom()

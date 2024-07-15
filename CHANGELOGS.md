@@ -101,6 +101,10 @@
 - Rearranged quest progression related things
 - Added new assets for Heart Containers and Heart Pieces
 
+3.0.0-build.2+e5fb18
+- Rearranged gear related things
+- Rearranged item related things
+
 ---
 
 ## MM Rando Tracker Changelog

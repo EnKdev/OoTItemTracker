@@ -276,9 +276,6 @@
     <Content Include="Icons\Other\HeartPiece3Thirds.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Icons\Other\HeartPieceFull.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Icons\Other\NoHeartPiece.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
