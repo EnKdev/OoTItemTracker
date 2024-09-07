@@ -397,6 +397,214 @@
         </Grid>
         <Grid Row="0" RowSpan="3" Column="1">
             <Image Source="{Binding DungeonBackground}" Height="1050" Width="235"/>
+            <!-- Dungeon Info -->
+            <TextBlock Text="{Binding DungeonType1}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, -930, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType2}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, -745, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType3}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, -560, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType4}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, -370, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType5}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, -180, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType6}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, 0, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType7}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="155, 180, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType8}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, 355, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType9}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, 545, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType10}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="135, 725, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType11}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-140, 1025, 0, 0"/>
+            <TextBlock Text="{Binding DungeonType12}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="105, 1025, 0, 0"/>
+            <!-- Key Counts -->
+            <!-- Maps and Compasses -->
+            <Image Source="{Binding DekuMapImage}" Width="50" Margin="-47, -850, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="deku"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding DekuCompassImage}" Width="50" Margin="50, -850, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="deku"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="deku"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding DcMapImage}" Width="50" Margin="-47, -665, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="dc"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding DcCompassImage}" Width="50" Margin="50, -665, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="dc"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="dc"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding JabuMapImage}" Width="50" Margin="-47, -480, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="jabu"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding JabuCompassImage}" Width="50" Margin="50, -480, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="jabu"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="jabu"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding ForestMapImage}" Width="50" Margin="-145, -288, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="frst"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ForestCompassImage}" Width="50" Margin="-47, -288, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="frst"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="frst"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ForestKeyImage}" Width="50" Margin="50, -288, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="frst"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ForestBkImage}" Width="50" Margin="148, -288, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="frst"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding FireMapImage}" Width="50" Margin="-145, -107, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="fire"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding FireCompassImage}" Width="50" Margin="-47, -107, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="fire"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="fire"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding FireKeyImage}" Width="50" Margin="50, -107, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="fire"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding FireBkImage}" Width="50" Margin="148, -107, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="fire"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding WaterMapImage}" Width="50" Margin="-145, 70, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="wtr"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding WaterCompassImage}" Width="50" Margin="-47, 70, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="wtr"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="wtr"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding WaterKeyImage}" Width="50" Margin="50, 70, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="wtr"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding WaterBkImage}" Width="50" Margin="148, 70, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="wtr"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding ShadowMapImage}" Width="50" Margin="-145, 248, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="shdw"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ShadowCompassImage}" Width="50" Margin="-47, 248, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="shdw"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="shdw"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ShadowKeyImage}" Width="50" Margin="50, 248, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="shdw"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding ShadowBkImage}" Width="50" Margin="148, 248, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="shdw"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding SpiritMapImage}" Width="50" Margin="-145, 434, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="sprt"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SpiritCompassImage}" Width="50" Margin="-47, 434, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="sprt"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="sprt"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SpiritKeyImage}" Width="50" Margin="50, 434, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="sprt"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding SpiritBkImage}" Width="50" Margin="148, 434, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="sprt"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding BottomMapImage}" Width="50" Margin="-101, 621, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="botw"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding BottomCompassImage}" Width="50" Margin="-2, 621, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="botw"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="botw"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding BottomKeyImage}" Width="50" Margin="95, 621, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="botw"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding CavernMapImage}" Width="50" Margin="-47, 798, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="ice"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding CavernCompassImage}" Width="50" Margin="50, 798, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="ice"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="ice"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding GtgKeyImage}" Width="50" Margin="-142, 960, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="gtg"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="gtg"/>
+                </Image.InputBindings>
+            </Image>
+            <!---->
+            <Image Source="{Binding GanonKeyImage}" Width="50" Margin="57, 960, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="ganon"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="ganon"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding GanonBkImage}" Width="50" Margin="155, 960, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="ganon"/>
+                </Image.InputBindings>
+            </Image>
         </Grid>
     </Grid>
 </UserControl>
