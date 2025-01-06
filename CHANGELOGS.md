@@ -27,7 +27,7 @@
 - Start of the private beta test
 
 1.0.0-beta.2+ocarina:
-- A whole lot of code refactoring
+- A lot of code refactoring
 - Locations are more responsive now
 
 1.0.0-beta.3+ocarina:
@@ -104,6 +104,14 @@
 3.0.0-build.2+e5fb18
 - Rearranged gear related things
 - Rearranged item related things
+
+3.0.0-build.3+113c1d8
+- Massive refactor of the entire codebase
+- Core Library has also been majorly refactored.
+
+# Important notice:<br/>
+Previous made `trackerState` files from V2.0.0 are incompatible with V3.0.0.<br/>
+This is due to a major change of how data is represented internally.
 
 ---
 

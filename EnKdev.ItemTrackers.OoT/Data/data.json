@@ -1,0 +1,972 @@
+﻿{
+  "arrows": [
+    {
+      "id": "Arr_Fire",
+      "name": "Fire Arrow",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Fire_Arrow_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Fire_Arrow_Icon_Disabled.png"
+    },
+    {
+      "id": "Arr_Ice",
+      "name": "Ice Arrow",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Ice_Arrow_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Ice_Arrow_Icon_Disabled.png"
+    },
+    {
+      "id": "Arr_Light",
+      "name": "Light Arrow",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Light_Arrow_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Light_Arrow_Icon_Disabled.png"
+    }
+  ],
+  "bottles": [
+    {
+      "id": "Btl1",
+      "name": "Bottle 1",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon_Disabled.png"
+    },
+    {
+      "id": "Btl2",
+      "name": "Bottle 2",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon_Disabled.png"
+    },
+    {
+      "id": "Btl3",
+      "name": "Bottle 3",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon_Disabled.png"
+    },
+    {
+      "id": "Btl4",
+      "name": "Bottle 4",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Bottle_Icon_Disabled.png"
+    }
+  ],
+  "items": [
+    {
+      "id": "Itm_Bmbch",
+      "name": "Bombchu",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Bombchu_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Bombchu_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_Bmrng",
+      "name": "Boomerang",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Boomerang_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Boomerang_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_DnFr",
+      "name": "Din's Fire",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Din's_Fire_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Din's_Fire_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_FrrWnd",
+      "name": "Farore's Wind",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_FrrWnd",
+      "name": "Farore's Wind",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_Lns",
+      "name": "Lens of Truth",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Lens_of_Truth_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Lens_of_Truth_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_Hmmr",
+      "name": "Megaton Hammer",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Megaton_Hammer_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Megaton_Hammer_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_NyrLv",
+      "name": "Nayru's Love",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Nayru's_Love_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Nayru's_Love_Icon_Disabled.png"
+    },
+    {
+      "id": "Itm_MgcBns",
+      "name": "Magic Beans",
+      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Magic_Bean_Icon.png",
+      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Magic_Bean_Icon_Disabled.png"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "Upg_Bmb_Base",
+      "name": "Bomb (20)",
+      "icons": {
+        "gearDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Bomb_Bag_Icon_Disabled.png",
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Bomb_Bag_Icon.png",
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Bomb_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Bomb_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_Bmb_1"
+    },
+    {
+      "id": "Upg_Bmb_1",
+      "name": "Bomb (30)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Big_Bomb_Bag_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Bomb_Icon.png"
+      },
+      "parent": "Upg_Bmb_Base",
+      "child": "Upg_Bmb_2"
+    },
+    {
+      "id": "Upg_Bmb_2",
+      "name": "Bomb (40)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Biggest_Bomb_Bag_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Bomb_Icon.png"
+      },
+      "parent": "Upg_Bmb_1",
+      "child": null
+    },
+    {
+      "id": "Upg_Slngsht_Base",
+      "name": "Slingshot (30)",
+      "icons": {
+        "gearDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Bullet_Bag_30_Icon_Disabled.png",
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Bullet_Bag_30_Icon.png",
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Slingshot_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Slingshot_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_Slngsht_1"
+    },
+    {
+      "id": "Upg_Slngsht_1",
+      "name": "Slingshot (40)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Bullet_Bag_40_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Slingshot_Icon.png"
+      },
+      "parent": "Upg_Slngsht_Base",
+      "child": "Upg_Slngsht_2"
+    },
+    {
+      "id": "Upg_Slngsht_2",
+      "name": "Slingshot (50)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Bullet_Bag_50_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Slingshot_Icon.png"
+      },
+      "parent": "Upg_Slngsht_1",
+      "child": null
+    },
+    {
+      "id": "Upg_Ocrn_Base",
+      "name": "Fairy Ocarina",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Fairy_Ocarina_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Fairy_Ocarina_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_Ocrn_1"
+    },
+    {
+      "id": "Upg_Ocrn_1",
+      "name": "Ocarina of Time",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Ocarina_of_Time_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Ocarina_of_Time_Icon.png"
+      },
+      "parent": "Upg_Ocrn_Base",
+      "child": null
+    },
+    {
+      "id": "Upg_Strngth_Base",
+      "name": "Goron Bracelet",
+      "icons": {
+        "gearDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Goron_Bracelet_Icon_Disabled.png",
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Goron_Bracelet_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": null,
+      "child": "Upg_Strngth_1"
+    },
+    {
+      "id": "Upg_Strngth_1",
+      "name": "Silver Gauntlets",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Silver_Gauntlets_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": "Upg_Strngth_Base",
+      "child": "Upg_Strngth_2"
+    },
+    {
+      "id": "Upg_Strngth_2",
+      "name": "Silver Gauntlets",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Golden_Gauntlets_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": "Upg_Strngth_1",
+      "child": null
+    },
+    {
+      "id": "Upg_Wllt_Base",
+      "name": "Adult's Wallet",
+      "icons": {
+        "gearDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Adult's_Wallet_Icon_Disabled.png",
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Adult's_Wallet_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": null,
+      "child": "Upg_Wllt_1"
+    },
+    {
+      "id": "Upg_Wllt_1",
+      "name": "Giant's Wallet",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Giant's_Wallet_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": "Upg_Wllt_Base",
+      "child": null
+    },
+    {
+      "id": "Upg_Bw_Base",
+      "name": "Fairy Bow (30)",
+      "icons": {
+        "gearDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Quiver_Icon_Disabled.png",
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Quiver_Icon.png",
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Bow_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Bow_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_Bw_1"
+    },
+    {
+      "id": "Upg_Bw_Base",
+      "name": "Fairy Bow (30)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Quiver_Icon.png",
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Bow_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Bow_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_Bw_1"
+    },
+    {
+      "id": "Upg_Bw_1",
+      "name": "Fairy Bow (40)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Big_Quiver_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Bow_Icon.png"
+      },
+      "parent": "Upg_Bw_Base",
+      "child": "Upg_Bw_2"
+    },
+    {
+      "id": "Upg_Bw_2",
+      "name": "Fairy Bow (50)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Biggest_Quiver_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Fairy_Bow_Icon.png"
+      },
+      "parent": "Upg_Bw_1",
+      "child": null
+    },
+    {
+      "id": "Upg_Scl_Base",
+      "name": "Silver Scale",
+      "icons": {
+        "gearDisabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Silver_Scale_Icon_Disabled.png",
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Silver_Scale_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": null,
+      "child": "Upg_Scl_1"
+    },
+    {
+      "id": "Upg_Scl_1",
+      "name": "Golden Scale",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": "pack://application:,,,/Icons/Upgrade/OoT3D_Golden_Scale_Icon.png",
+        "itemDisabled": null,
+        "itemEnabled": null
+      },
+      "parent": "Upg_Scl_Base",
+      "child": null
+    },
+    {
+      "id": "Upg_Hksht_Base",
+      "name": "Hookshot",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Hookshot_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Hookshot_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_Hksht_1"
+    },
+    {
+      "id": "Upg_Hksht_1",
+      "name": "Longshot",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Longshot_Icon.png"
+      },
+      "parent": "Upg_Hksht_Base",
+      "child": null
+    },
+    {
+      "id": "Upg_DkNt_Base",
+      "name": "Deku Nuts (20)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Nut_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Nut_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_DkNt_1"
+    },
+    {
+      "id": "Upg_DkNt_1",
+      "name": "Deku Nuts (30)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Nut_Icon.png"
+      },
+      "parent": "Upg_DkNt_Base",
+      "child": "Upg_DkNt_2"
+    },
+    {
+      "id": "Upg_DkNt_2",
+      "name": "Deku Nuts (40)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Nut_Icon.png"
+      },
+      "parent": "Upg_DkNt_1",
+      "child": null
+    },
+    {
+      "id": "Upg_DkStck_Base",
+      "name": "Deku Stick (10)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Stick_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Stick_Icon.png"
+      },
+      "parent": null,
+      "child": "Upg_DkStck_1"
+    },
+    {
+      "id": "Upg_DkStck_1",
+      "name": "Deku Stick (20)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Stick_Icon.png"
+      },
+      "parent": "Upg_DkStck_Base",
+      "child": "Upg_DkStck_2"
+    },
+    {
+      "id": "Upg_DkStck_2",
+      "name": "Deku Stick (30)",
+      "icons": {
+        "gearDisabled": null,
+        "gearEnabled": null,
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/Item/OoT3D_Deku_Stick_Icon.png"
+      },
+      "parent": "Upg_DkStck_1",
+      "child": null
+    }
+  ],
+  "progression": [
+    {
+      "id": "Child_Emerald",
+      "name": "Kokiri Emerald",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Kokiri's_Emerald_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Kokiri's_Emerald_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Child_Ruby",
+      "name": "Goron Ruby",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Goron's_Ruby_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Goron's_Ruby_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Child_Sapphire",
+      "name": "Zora Sapphire",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Zora's_Sapphire_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Zora's_Sapphire_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Adult_LghtMd",
+      "name": "Light Medallion",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Light_Medallion_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Light_Medallion_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Adult_FrstMd",
+      "name": "Forest Medallion",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Forest_Medallion_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Forest_Medallion_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Adult_FrMd",
+      "name": "Fire Medallion",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Fire_Medallion_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Fire_Medallion_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Adult_WtrMd",
+      "name": "Water Medallion",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Water_Medallion_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Water_Medallion_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Adult_ShdwMd",
+      "name": "Shadow Medallion",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Shadow_Medallion_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Shadow_Medallion_Icon.png",
+      "foundAt": "???"
+    },
+    {
+      "id": "Adult_SprtMd",
+      "name": "Spirit Medallion",
+      "questDisabled": "pack://application:,,,/Icons/Quest/OoT3D_Spirit_Medallion_Icon_Disabled.png",
+      "questEnabled": "pack://application:,,,/Icons/Quest/OoT3D_Spirit_Medallion_Icon.png",
+      "foundAt": "???"
+    }
+  ],
+  "equips": {
+    "boots": [
+      {
+        "id": "Eqp_Boots1",
+        "name": "Kokiri Boots",
+        "equipDisabled": null,
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Kokiri_Boots_Icon.png"
+      },
+      {
+        "id": "Eqp_Boots2",
+        "name": "Iron Boots",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Iron_Boots_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Iron_Boots_Icon.png"
+      },
+      {
+        "id": "Eqp_Boots3",
+        "name": "Hover Boots",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Hover_Boots_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Hover_Boots_Icon.png"
+      }
+    ],
+    "swords": [
+      {
+        "id": "Eqp_Sword1",
+        "name": "Kokiri Sword",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Kokiri_Sword_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Kokiri_Sword_Icon.png"
+      },
+      {
+        "id": "Eqp_Sword2",
+        "name": "Master Sword",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Master_Sword_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Master_Sword_Icon.png"
+      },
+      {
+        "id": "Eqp_Sword3",
+        "name": "Biggoron's Sword",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Biggoron's_Sword_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Biggoron's_Sword_Icon.png"
+      }
+    ],
+    "shields": [
+      {
+        "id": "Eqp_Shield1",
+        "name": "Deku Shield",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Deku_Shield_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Deku_Shield_Icon.png"
+      },
+      {
+        "id": "Eqp_Shield2",
+        "name": "Hylian Shield",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Hylian_Shield_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Hylian_Shield_Icon.png"
+      },
+      {
+        "id": "Eqp_Shield3",
+        "name": "Mirror Shield",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Mirror_Shield_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Mirror_Shield_Icon.png"
+      }
+    ],
+    "tunics": [
+      {
+        "id": "Eqp_Tunic1",
+        "name": "Kokiri Tunic",
+        "equipDisabled": null,
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Kokiri_Tunic_Icon.png"
+      },
+      {
+        "id": "Eqp_Tunic2",
+        "name": "Goron Tunic",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Goron_Tunic_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Goron_Tunic_Icon.png"
+      },
+      {
+        "id": "Eqp_Tunic3",
+        "name": "Zora Tunic",
+        "equipDisabled": "pack://application:,,,/Icons/Equip/OoT3D_Zora_Tunic_Icon_Disabled.png",
+        "equipEnabled": "pack://application:,,,/Icons/Equip/OoT3D_Zora_Tunic_Icon.png"
+      }
+    ]
+  },
+  "songs": [
+    {
+      "id": "Sng_Lul",
+      "name": "Zelda's Lullaby",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Zelda's_Lullaby_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Zelda's_Lullaby_Icon.png"
+    },
+    {
+      "id": "Sng_Epo",
+      "name": "Epona's Song",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Epona's_Song_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Epona's_Song_Icon.png"
+    },
+    {
+      "id": "Sng_Sar",
+      "name": "Saria's Song",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Saria's_Song_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Saria's_Song_Icon.png"
+    },
+    {
+      "id": "Sng_SoS",
+      "name": "Song of Storms",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Song_of_Storms_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Song_of_Storms_Icon.png"
+    },
+    {
+      "id": "Sng_Sun",
+      "name": "Sun's Song",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Sun's_Song_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Sun's_Song_Icon.png"
+    },
+    {
+      "id": "Sng_SoT",
+      "name": "Song of Time",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Song_of_Time_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Song_of_Time_Icon.png"
+    },
+    {
+      "id": "Sng_Min",
+      "name": "Minuet of Forest",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Minuet_of_Forest_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Minuet_of_Forest_Icon.png"
+    },
+    {
+      "id": "Sng_Bol",
+      "name": "Bolero of Fire",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Bolero_of_Fire_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Bolero_of_Fire_Icon.png"
+    },
+    {
+      "id": "Sng_Ser",
+      "name": "Serenade of Water",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Serenade_of_Water_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Serenade_of_Water_Icon.png"
+    },
+    {
+      "id": "Sng_Req",
+      "name": "Requiem of Spirit",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Requiem_of_Spirit_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Requiem_of_Spirit_Icon.png"
+    },
+    {
+      "id": "Sng_Noc",
+      "name": "Nocturne of Shadow",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Nocturne_of_Shadow_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Nocturne_of_Shadow_Icon.png"
+    },
+    {
+      "id": "Sng_Pre",
+      "name": "Prelude of Light",
+      "songDisabled": "pack://application:,,,/Icons/Songs/OoT3D_Prelude_of_Light_Icon_Disabled.png",
+      "songEnabled": "pack://application:,,,/Icons/Songs/OoT3D_Prelude_of_Light_Icon.png"
+    }
+  ],
+  "trades": {
+    "child": [
+      {
+        "id": "Trade_Child1",
+        "name": "Weird Egg",
+        "itemDisabled": "pack://application:,,,/Icons/ChildTrade/OoT3D_Weird_Egg_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/ChildTrade/OoT3D_Weird_Egg_Icon.png",
+        "parent": null,
+        "child": "Trade_Child2"
+      },
+      {
+        "id": "Trade_Child2",
+        "name": "Cucco",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/ChildTrade/OoT3D_Cucco_Icon.png",
+        "parent": "Trade_Child1",
+        "child": "Trade_Child3"
+      },
+      {
+        "id": "Trade_Child3",
+        "name": "Zelda's Letter",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/ChildTrade/OoT3D_Zeldas_Letter_Icon.png",
+        "parent": "Trade_Child2",
+        "child": "Trade_Child4"
+      },
+      {
+        "id": "Trade_Child4",
+        "name": "Skull Mask",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/ChildTrade/OoT3D_Skull_Mask_Icon.png",
+        "parent": "Trade_Child3",
+        "child": "Trade_Child5"
+      },
+      {
+        "id": "Trade_Child5",
+        "name": "Mask of Truth",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/ChildTrade/OoT3D_Mask_of_Truth_Icon.png",
+        "parent": "Trade_Child4",
+        "child": null
+      }
+    ],
+    "adult": [
+      {
+        "id": "Trade_Adult1",
+        "name": "Pocket Egg",
+        "itemDisabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Pocket_Egg_Icon_Disabled.png",
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Pocket_Egg_Icon.png",
+        "parent": null,
+        "child": "Trade_Adult2"
+      },
+      {
+        "id": "Trade_Adult2",
+        "name": "Pocket Cucco",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Pocket_Cucco_Icon.png",
+        "parent": "Trade_Adult1",
+        "child": "Trade_Adult3"
+      },
+      {
+        "id": "Trade_Adult3",
+        "name": "Cojiro",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Cojiro_Icon.png",
+        "parent": "Trade_Adult2",
+        "child": "Trade_Adult4"
+      },
+      {
+        "id": "Trade_Adult4",
+        "name": "Odd Mushroom",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Odd_Mushroom_Icon.png",
+        "parent": "Trade_Adult3",
+        "child": "Trade_Adult5"
+      },
+      {
+        "id": "Trade_Adult5",
+        "name": "Odd Poultice",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Odd_Poultice_Icon.png",
+        "parent": "Trade_Adult4",
+        "child": "Trade_Adult6"
+      },
+      {
+        "id": "Trade_Adult6",
+        "name": "Poachers Saw",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Poachers_Saw_Icon.png",
+        "parent": "Trade_Adult5",
+        "child": "Trade_Adult7"
+      },
+      {
+        "id": "Trade_Adult7",
+        "name": "Giants Knife",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Giants_Knife_Icon.png",
+        "parent": "Trade_Adult6",
+        "child": "Trade_Adult8"
+      },
+      {
+        "id": "Trade_Adult8",
+        "name": "Broken Gorons Sword",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Broken_Gorons_Sword_Icon.png",
+        "parent": "Trade_Adult7",
+        "child": "Trade_Adult9"
+      },
+      {
+        "id": "Trade_Adult9",
+        "name": "Prescription",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Prescription_Icon.png",
+        "parent": "Trade_Adult8",
+        "child": "Trade_Adult10"
+      },
+      {
+        "id": "Trade_Adult10",
+        "name": "Eyeball Frog",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Eyeball_Frog_Icon.png",
+        "parent": "Trade_Adult9",
+        "child": "Trade_Adult11"
+      },
+      {
+        "id": "Trade_Adult11",
+        "name": "Eye Drops",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Eye_Drops_Icon.png",
+        "parent": "Trade_Adult10",
+        "child": "Trade_Adult12"
+      },
+      {
+        "id": "Trade_Adult12",
+        "name": "Claim Check",
+        "itemDisabled": null,
+        "itemEnabled": "pack://application:,,,/Icons/AdultTrade/OoT3D_Claim_Check_Icon.png",
+        "parent": "Trade_Adult11",
+        "child": null
+      }
+    ]
+  },
+  "other": [
+    {
+      "id": "Othr_Token",
+      "name": "Gerudo Token",
+      "itemDisabled": "pack://application:,,,/Icons/Other/OoT3D_Gerudo_Token_Icon_Disabled.png",
+      "itemEnabled": "pack://application:,,,/Icons/Other/OoT3D_Gerudo_Token_Icon.png"
+    },
+    {
+      "id": "Othr_Shard",
+      "name": "Shard of Agony",
+      "itemDisabled": "pack://application:,,,/Icons/Other/OoT3D_Shard_of_Agony_Icon_Disabled.png",
+      "itemEnabled": "pack://application:,,,/Icons/Other/OoT3D_Shard_of_Agony_Icon.png"
+    }
+  ],
+  "vanillaDungeons": [
+    {
+      "id": "Dungeon_DT",
+      "name": "Inside the Deku Tree",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_DC",
+      "name": "Dodongo's Cavern",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_Jabu",
+      "name": "Inside Jabu-Jabu's Belly",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_Frst",
+      "name": "Forest Temple",
+      "maxKeys": 5,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Fir",
+      "name": "Fire Temple",
+      "maxKeys": 8,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Wtr",
+      "name": "Water Temple",
+      "maxKeys": 6,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Sprt",
+      "name": "Spirit Temple",
+      "masKeys": 5,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Shdw",
+      "name": "Shadow Temple",
+      "maxKeys": 5,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_BotW",
+      "name": "Bottom of the Well",
+      "maxKeys": 3,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_Ice",
+      "name": "Ice Cavern",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_GTG",
+      "name": "Gerudo Training Grounds",
+      "maxKeys": 9,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_GT",
+      "name": "Ganon's Tower",
+      "maxKeys": 2,
+      "hasBossKey": true
+    }
+  ],
+  "mqDungeons": [
+    {
+      "id": "Dungeon_DT",
+      "name": "Inside the Deku Tree",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_DC",
+      "name": "Dodongo's Cavern",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_Jabu",
+      "name": "Inside Jabu-Jabu's Belly",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_Frst",
+      "name": "Forest Temple",
+      "maxKeys": 6,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Fir",
+      "name": "Fire Temple",
+      "maxKeys": 5,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Wtr",
+      "name": "Water Temple",
+      "maxKeys": 2,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Sprt",
+      "name": "Spirit Temple",
+      "masKeys": 7,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_Shdw",
+      "name": "Shadow Temple",
+      "maxKeys": 6,
+      "hasBossKey": true
+    },
+    {
+      "id": "Dungeon_BotW",
+      "name": "Bottom of the Well",
+      "maxKeys": 2,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_Ice",
+      "name": "Ice Cavern",
+      "maxKeys": 0,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_GTG",
+      "name": "Gerudo Training Grounds",
+      "maxKeys": 3,
+      "hasBossKey": false
+    },
+    {
+      "id": "Dungeon_GT",
+      "name": "Ganon's Tower",
+      "maxKeys": 3,
+      "hasBossKey": true
+    }
+  ],
+  "locations": [
+    "???",
+    "FREE",
+    "DEKU",
+    "DC",
+    "JABU",
+    "FRST",
+    "FIRE",
+    "WTR",
+    "SHDW",
+    "SPRT"
+  ],
+  "types": [
+    "???",
+    "V",
+    "MQ"
+  ]
+}

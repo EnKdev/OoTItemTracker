@@ -12,7 +12,7 @@ public static class SpriteUtils
     /// <returns>
     /// A boolean value indicating whether the sprite is enabled or disabled.
     /// </returns>
-    public static bool GetState(string spriteName)
+    public static bool GetState(string? spriteName)
     {
         return !spriteName.Contains("_Disabled");
     }

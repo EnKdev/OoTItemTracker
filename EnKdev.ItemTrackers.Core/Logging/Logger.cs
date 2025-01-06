@@ -41,6 +41,26 @@ public static class Logger
     }
 
     /// <summary>
+    /// Logs a service call made by an app.
+    /// </summary>
+    /// <param name="callingAssembly">The assembly that called the service.</param>
+    /// <param name="service">The service that has been called.</param>
+    /// <param name="method">The method of the service that has been invoked.</param>
+    public static void LogServiceCall(string callingAssembly, string service, string method)
+    {
+        _logger?.Info($"[{callingAssembly}] Triggered the following service: {service}, method: {method}");
+    }
+
+    /// <summary>
+    /// Logs an informative message.
+    /// </summary>
+    /// <param name="message">The info.</param>
+    public static void LogInformation(string message)
+    {
+        _logger?.Info($"[INFO]: {message}");
+    }
+
+    /// <summary>
     /// Logs an exception that occurred in the application.
     /// </summary>
     /// <param name="ex">The exception object that occurred.</param>
