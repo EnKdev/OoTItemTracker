@@ -109,6 +109,10 @@
 - Massive refactor of the entire codebase
 - Core Library has also been majorly refactored.
 
+3.0.0-build.4+b749f9
+- Start repopulating the UI
+- Code fixes and further service implementations (Testing needed!)
+
 # Important notice:<br/>
 Previous made `trackerState` files from V2.0.0 are incompatible with V3.0.0.<br/>
 This is due to a major change of how data is represented internally.

@@ -10,7 +10,7 @@ public static class OoTConstants
     public const string CompassEnabled = "pack://application:,,,/Icons/Item/OoT3D_Compass_Icon.png";
     public const string SmallKeyDisabled = "pack://application:,,,/Icons/Item/OoT3D_Small_Key_Icon_Disabled.png";
     public const string SmallKeyEnabled = "pack://application:,,,/Icons/Item/OoT3D_Small_Key_Icon.png";
-    public const string? BossKeyDisabled = "pack://application:,,,/Icons/Item/OoT3D_Boss_Key_Icon_Disabled.png";
+    public const string BossKeyDisabled = "pack://application:,,,/Icons/Item/OoT3D_Boss_Key_Icon_Disabled.png";
     public const string BossKeyEnabled = "pack://application:,,,/Icons/Item/OoT3D_Boss_Key_Icon.png";
 
     public static readonly List<string> HeartPieceProgression =

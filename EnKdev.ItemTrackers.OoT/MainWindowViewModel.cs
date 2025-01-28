@@ -12,6 +12,8 @@ public partial class MainWindowViewModel : ObservableRecipient
     private readonly BottleService _bottleService = new();
     private readonly DungeonService _dungeonService = new();
     private readonly ItemService _itemService = new();
+    private readonly SongService _songService = new();
+    private readonly QuestService _questService = new();
 
     [ObservableProperty]
     private TrackerProperties _trackerProperties = new();
@@ -105,5 +107,11 @@ public partial class MainWindowViewModel : ObservableRecipient
         Resolver.ResolveDefaultKeyColors(TrackerProperties);
         Resolver.ResolveBackgrounds(TrackerProperties);
         Resolver.ResolveDefaultIcons(TrackerProperties);
+        Resolver.ResolveKeyIcons(TrackerProperties);
+        Resolver.ResolveDungeonIcons(TrackerProperties);
+        Resolver.ResolveSongIcons(TrackerProperties);
+        Resolver.ResolveEquipIcons(TrackerProperties);
+        Resolver.ResolveGearIcons(TrackerProperties);
+        Resolver.ResolveItemIcons(TrackerProperties);
     }
 }

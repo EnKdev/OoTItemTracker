@@ -481,9 +481,6 @@ public partial class TrackerProperties : ObservableRecipient
 
     [ObservableProperty]
     private string _ganonBkImage;
-
-    [ObservableProperty] 
-    private string _gtgCompassImage;
     
     [ObservableProperty]
     private string _gtgKeyImage;

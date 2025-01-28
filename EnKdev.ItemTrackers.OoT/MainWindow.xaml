@@ -5,7 +5,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:EnKdev.ItemTrackers.OoT"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="450" Width="800">
+        Title="{Binding Title}" Height="1089" Width="715" FontFamily="{StaticResource 'FOT-Chiaro Std B'}" 
+        Foreground="White" AllowsTransparency="True" WindowStyle="None" Background="Transparent"
+        MouseDown="MainWindow_OnMouseDown" ResizeMode="NoResize">
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
@@ -166,7 +168,7 @@
             <TextBlock Text="{Binding TrackerProperties.Location8}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, -65, 0, 0"/>
             <TextBlock Text="{Binding TrackerProperties.Location9}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, -165, 0, 0"/>
             <!-- Heart Containers, Heart Pieces -->
-            <Image Source="{Binding TrackerProperties.HeartPiece}" Width="105" Margin="-20, -155, 0, 0">
+            <Image Source="{Binding TrackerProperties.HeartPiece}" Width="40" Margin="-100, 30, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ProgressHeartPieceCommand}"/>
                 </Image.InputBindings>
