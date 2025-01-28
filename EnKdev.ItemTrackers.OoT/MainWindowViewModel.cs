@@ -14,7 +14,7 @@ public partial class MainWindowViewModel : ObservableRecipient
     private readonly ItemService _itemService = new();
 
     [ObservableProperty]
-    private TrackerProperties _trackerProperties;
+    private TrackerProperties _trackerProperties = new();
     
     private int _ocarinaState;
     private int _scaleState;

@@ -1,4 +1,5 @@
-﻿using EnKdev.ItemTrackers.Core.Sprites;
+﻿using EnKdev.ItemTrackers.Core.Internal.Json.OoT;
+using EnKdev.ItemTrackers.Core.Sprites;
 
 namespace EnKdev.ItemTrackers.Core.Services;
 

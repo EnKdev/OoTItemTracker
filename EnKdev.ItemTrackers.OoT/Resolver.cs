@@ -1,4 +1,6 @@
-﻿using EnKdev.ItemTrackers.Core;
+﻿using System.Collections.Generic;
+using System.Linq;
+using EnKdev.ItemTrackers.Core;
 using EnKdev.ItemTrackers.OoT.Internal;
 
 namespace EnKdev.ItemTrackers.OoT;
@@ -56,5 +58,20 @@ public static class Resolver
         properties.GearBackground = OoTConstants.GearBg;
         properties.DungeonBackground = OoTConstants.DungeonBg;
         properties.QuestBackground = OoTConstants.QuestBg;
+    }
+
+    public static void ResolveDefaultIcons(TrackerProperties properties)
+    {
+        var ootData = Globals.InstanceData;
+
+        properties.KokiriEmeraldImage = ootData?.Progression![0].DisabledSprite!;
+        properties.GoronRubyImage = ootData?.Progression![1].DisabledSprite!;
+        properties.ZoraSapphireImage = ootData?.Progression![2].DisabledSprite!;
+        properties.LightMedallionImage = ootData?.Progression![3].DisabledSprite!;
+        properties.ForestMedallionImage = ootData?.Progression![4].DisabledSprite!;
+        properties.FireMedallionImage = ootData?.Progression![5].DisabledSprite!;
+        properties.WaterMedallionImage = ootData?.Progression![6].DisabledSprite!;
+        properties.ShadowMedallionImage = ootData?.Progression![7].DisabledSprite!;
+        properties.SpiritMedallionImage = ootData?.Progression![8].DisabledSprite!;
     }
 }

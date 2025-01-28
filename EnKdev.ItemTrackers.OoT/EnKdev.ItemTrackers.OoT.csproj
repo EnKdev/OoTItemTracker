@@ -772,4 +772,8 @@
     <ProjectReference Include="..\EnKdev.ItemTrackers.Core\EnKdev.ItemTrackers.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
 </Project>
