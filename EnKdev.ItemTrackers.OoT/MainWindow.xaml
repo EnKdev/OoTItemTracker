@@ -27,135 +27,135 @@
             <!-- Quest Progress -->
             <Image Source="{Binding TrackerProperties.ShardImage}" Width="45" Margin="-335, -215, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleShardCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleOtherCommand}" CommandParameter="Othr_Shard"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GerudoTokenImage}" Width="45" Margin="-210, -215, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleGerudoTokenCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleOtherCommand}" CommandParameter="Othr_Token"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GsImage}" Width="45" Margin="-335, -90, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseGsCountCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DecreaseGsCountCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleGsCountCommand}" CommandParameter="inc"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding HandleGsCountCommand}" CommandParameter="dec"/>
                 </Image.InputBindings>
             </Image>
             <TextBlock Text="{Binding TrackerProperties.GsTokens}" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-195, 111, 0, 0"></TextBlock>
             <!-- Medallions and Stones -->
             <Image Source="{Binding TrackerProperties.LightMedallionImage}" Width="40" Margin="257, -165, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleLightMedallionCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLightLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_LghtMd"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_LghtMd"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ForestMedallionImage}" Width="40" Margin="345, -115, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleForestMedallionCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetForestLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_FrstMd"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_FrstMd"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FireMedallionImage}" Width="40" Margin="345, -15, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleFireMedallionCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetFireLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_FrMd"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_FrMd"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.WaterMedallionImage}" Width="40" Margin="258, 35, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleWaterMedallionCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetWaterLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_WtrMd"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_WtrMd"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SpiritMedallionImage}" Width="40" Margin="170, -15, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSpiritMedallionCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetSpiritLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_SprtMd"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_SprtMd"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ShadowMedallionImage}" Width="40" Margin="170, -115, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleShadowMedallionCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetShadowLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_ShdwMd"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_ShdwMd"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.KokiriEmeraldImage}" Width="40" Margin="165, 205, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEmeraldCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetEmeraldLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Child_Emerald"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Child_Emerald"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GoronRubyImage}" Width="40" Margin="258, 205, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleGoronRubyCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetRubyLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Child_Ruby"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Child_Ruby"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ZoraSapphireImage}" Width="40" Margin="345, 205, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleZorasSapphireCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetSapphireLocationCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Child_Sapphire"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Child_Sapphire"/>
                 </Image.InputBindings>
             </Image>
             <!-- Songs -->
             <Image Source="{Binding TrackerProperties.LullabyImage}" Width="50" Margin="-335, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleZeldasLullabyCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Lul"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.EponaImage}" Width="50" Margin="-335, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEponasSongCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Epo"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SariaImage}" Width="50" Margin="-335, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSariasSongCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Sar"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SunsImage}" Width="50" Margin="-225, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSunsSongCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Sun"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SotImage}" Width="50" Margin="-225, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongOfTimeCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_SoT"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SosImage}" Width="50" Margin="-225, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongOfStormsCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_SoS"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MinuetImage}" Width="50" Margin="-115, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMinuetCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Min"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BoleroImage}" Width="50" Margin="-115, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBoleroCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Bol"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SerenadeImage}" Width="50" Margin="-115, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSerenadeCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Ser"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.RequiemImage}" Width="50" Margin="-5, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleRequiemCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Req"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.NocturneImage}" Width="50" Margin="-5, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleNocturneCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Noc"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.PreludeImage}" Width="50" Margin="-5, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding TogglePreludeCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Pre"/>
                 </Image.InputBindings>
             </Image>
             <!-- Location Infos -->
@@ -171,13 +171,13 @@
             <!-- Heart Containers, Heart Pieces -->
             <Image Source="{Binding TrackerProperties.HeartPiece}" Width="40" Margin="-120, 30, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ProgressHeartPieceCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleHeartsCommand}" CommandParameter="hp"/>
                 </Image.InputBindings>
             </Image>
             <TextBlock Text="{Binding TrackerProperties.HeartContainerCount}" Width="20" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-255, 173, 0, 0"/>
             <Image Source="{Binding TrackerProperties.HeartContainer}" Width="40" Margin="-335, 30, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseHeartContainerCountCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleHeartsCommand}" CommandParameter="hc"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.HeartPieceProgression}" Width="100" Margin="-18, -155, 0, 0"/>
@@ -188,57 +188,57 @@
             <!-- Swords -->
             <Image Source="{Binding TrackerProperties.KokiriSwordImage}" Width="60" Margin="-70, -230, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleKokiriSwordCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Sword1"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MasterSwordImage}" Width="60" Margin="80, -230, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMasterSwordCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Sword2"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BiggoronSwordImage}" Width="60" Margin="240, -230, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBiggoronSwordCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Sword3"/>
                 </Image.InputBindings>
             </Image>
             <!-- Shields -->
             <Image Source="{Binding TrackerProperties.DekuShieldImage}" Width="55" Margin="-70, -80, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleDekuShieldCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Shield1"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.HylianShieldImage}" Width="55" Margin="80, -80, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleHylianShieldCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Shield2"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MirrorShieldImage}" Width="55" Margin="240, -80, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMirrorShieldCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Shield3"/>
                 </Image.InputBindings>
             </Image>
             <!-- Tunics -->
             <Image Source="{Binding TrackerProperties.KokiriTunicImage}" Width="60" Margin="-70, 75, 0, 0"/>
             <Image Source="{Binding TrackerProperties.GoronTunicImage}" Width="60" Margin="80, 75, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleGoronTunicCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Tunic2"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ZoraTunicImage}" Width="60" Margin="240, 75, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleZoraTunicCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Tunic3"/>
                 </Image.InputBindings>
             </Image>
             <!-- Boots -->
             <Image Source="{Binding TrackerProperties.KokiriBootsImage}" Width="60" Margin="-70, 220, 0, 0"/>
             <Image Source="{Binding TrackerProperties.IronBootsImage}" Width="60" Margin="80, 220, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleIronBootsCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Boots2"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.HoverBootsImage}" Width="60" Margin="240, 220, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleHoverBootsCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Boots3"/>
                 </Image.InputBindings>
             </Image>
             <!-- Upgradeables -->

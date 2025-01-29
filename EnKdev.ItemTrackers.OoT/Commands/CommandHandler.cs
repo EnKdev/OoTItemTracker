@@ -1,7 +1,9 @@
-﻿using System.Linq;
+﻿using System.Windows;
 using EnKdev.ItemTrackers.Core.Internal.Json;
 using EnKdev.ItemTrackers.Core.Logging;
 using EnKdev.ItemTrackers.Core.Services;
+using EnKdev.ItemTrackers.Core.Sprites;
+using EnKdev.ItemTrackers.Core.Utils;
 using EnKdev.ItemTrackers.OoT.Internal;
 
 namespace EnKdev.ItemTrackers.OoT.Commands;
@@ -10,44 +12,24 @@ public static class CommandHandler
 {
     private static readonly OoTData? OoTData = Globals.InstanceData;
     
-    private static readonly OtherService OtherService = new();
     private static readonly ArrowService ArrowService = new();
     private static readonly BottleService BottleService = new();
     private static readonly DungeonService DungeonService = new();
     private static readonly ItemService ItemService = new();
-    private static readonly SongService SongService = new();
-    private static readonly QuestService QuestService = new();
     
-    public static void ToggleShard(TrackerProperties properties)
+    
+    // ==================
+    // = OTHER COMMANDS =
+    // ==================
+    public static void ToggleOther(string otherId, TrackerProperties properties)
     {
-        Logger.LogInformation("Toggling Shard/Stone of Agony.");
-
-        var shardObj = OoTData?.Other?.FirstOrDefault(x => x.Id == "Othr_Shard");
-
-        if (shardObj is null)
+        if (Mappings.GetOtherMappings().TryGetValue(otherId, out var mapping))
         {
-            Logger.LogInformation("Shard/Stone of Agony not found. Returning.");
-            return;
+            OtherUtils.ToggleOtherItem(
+                otherId, properties, mapping.Get, mapping.Set,
+                id => ObjectUtils.GetOtherObjectById(id, OoTData),
+                SpriteUtils.GetState, Logger.LogInformation);
         }
-        
-        properties.ShardImage = OtherService.ToggleOtherItem(shardObj, properties.ShardImage);
-        Logger.LogInteraction(nameof(properties.ShardImage));
-    }
-
-    public static void ToggleGerudoToken(TrackerProperties properties)
-    {
-        Logger.LogInformation("Toggling Gerudo Token.");
-        
-        var tokenObj = OoTData?.Other?.FirstOrDefault(x => x.Id == "Othr_Token");
-
-        if (tokenObj is null)
-        {
-            Logger.LogInformation("Gerudo Token not found. Returning.");
-            return;
-        }
-        
-        properties.GerudoTokenImage = OtherService.ToggleOtherItem(tokenObj, properties.GerudoTokenImage);
-        Logger.LogInteraction(nameof(properties.GerudoTokenImage));
     }
 
     public static void IncreaseGoldSkulltulaCount(TrackerProperties properties, int maxCount)
@@ -116,5 +98,97 @@ public static class CommandHandler
         }
         
         Logger.LogInteraction(nameof(properties.HeartPieceCount));
+    }
+    
+    // =====================
+    // = QUEST PROGRESSION =
+    // =====================
+
+    public static void ToggleQuest(string progressionId, TrackerProperties properties)
+    {
+        if (Mappings.GetQuestMappings().TryGetValue(progressionId, out var mapping))
+        {
+            QuestUtils.ToggleQuestProgression(
+                progressionId, properties, mapping.Get, mapping.Set,
+                id => ObjectUtils.GetProgressionObjectById(id, OoTData),
+                SpriteUtils.GetState, Logger.LogInformation);
+        }
+    }
+
+    public static void UpdateLocation(string questItem, TrackerProperties properties)
+    {
+        if (Mappings.GetLocationMappings().TryGetValue(questItem, out var mapping))
+        {
+            QuestUtils.UpdateLocationIndex(
+                properties,
+                mapping.Item1, // Get index
+                mapping.Item2, // Set index
+                mapping.Item3, // Get location
+                mapping.Item4, // Set location
+                mapping.Item5, // Get location by index
+                mapping.Item6, // Max index
+                Logger.LogInformation,
+                action => Application.Current.Dispatcher.Invoke(action)
+            );
+        }
+        else
+        {
+            Logger.LogInformation($"Invalid quest item: {questItem}.");
+        }
+    }
+    
+    // =================
+    // = SONG COMMANDS =
+    // =================
+
+    public static void ToggleSong(string songId, TrackerProperties properties)
+    {
+        if (Mappings.GetSongMappings().TryGetValue(songId, out var mapping))
+        {
+            SongUtils.ToggleSong(
+                songId, properties, mapping.Get, mapping.Set,
+                id => ObjectUtils.GetSongObjectById(id, OoTData),
+                SpriteUtils.GetState, Logger.LogInformation);
+        }
+    }
+    
+    // ==================
+    // = EQUIP COMMANDS =
+    // ==================
+
+    public static void ToggleEquip(string equipId, TrackerProperties properties)
+    {
+        // ReSharper disable once InvertIf
+        if (Mappings.GetEquipMappings().TryGetValue(equipId, out var mapping))
+        {
+            if (equipId.Contains("Sword"))
+            {
+                EquipUtils.ToggleSword(
+                    equipId, properties, mapping.Get, mapping.Set,
+                    id => ObjectUtils.GetSwordObjectById(id, OoTData)!,
+                    SpriteUtils.GetState, Logger.LogInformation);
+            }
+            else if (equipId.Contains("Shield"))
+            {
+                EquipUtils.ToggleShield(
+                    equipId, properties, mapping.Get, mapping.Set,
+                    id => ObjectUtils.GetShieldObjectById(id, OoTData)!,
+                    SpriteUtils.GetState, Logger.LogInformation);
+            }
+            else if (equipId.Contains("Tunic"))
+            {
+                EquipUtils.ToggleTunic(
+                    equipId, properties, mapping.Get, mapping.Set,
+                    id => ObjectUtils.GetTunicObjectById(id, OoTData)!,
+                    SpriteUtils.GetState, Logger.LogInformation);
+            }
+            else if (equipId.Contains("Boots"))
+            {
+                EquipUtils.ToggleBoots(
+                    equipId, properties, mapping.Get, mapping.Set,
+                    id => ObjectUtils.GetBootObjectById(id, OoTData)!,
+                    SpriteUtils.GetState, Logger.LogInformation);
+            }
+        }
     }
 }

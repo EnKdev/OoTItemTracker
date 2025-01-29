@@ -6,67 +6,130 @@ namespace EnKdev.ItemTrackers.OoT.Internal;
 public partial class TrackerProperties : ObservableRecipient
 {
     [ObservableProperty]
-    private string _location1;
+    private string? _location1;
 
     [ObservableProperty]
-    private string _location2;
+    private string? _location2;
 
     [ObservableProperty]
-    private string _location3;
+    private string? _location3;
 
     [ObservableProperty]
-    private string _location4;
+    private string? _location4;
 
     [ObservableProperty]
-    private string _location5;
+    private string? _location5;
 
     [ObservableProperty]
-    private string _location6;
+    private string? _location6;
 
     [ObservableProperty]
-    private string _location7;
+    private string? _location7;
 
     [ObservableProperty]
-    private string _location8;
-
-    [ObservableProperty]
-    private string _location9;
+    private string? _location8;
     
     [ObservableProperty]
-    private string _dungeonType1;
+    private string? _location9;
 
     [ObservableProperty]
-    private string _dungeonType2;
+    private int _location1Idx;
 
     [ObservableProperty]
-    private string _dungeonType3;
+    private int _location2Idx;
+    
+    [ObservableProperty]
+    private int _location3Idx;
 
     [ObservableProperty]
-    private string _dungeonType4;
+    private int _location4Idx;
+    
+    [ObservableProperty]
+    private int _location5Idx;
 
     [ObservableProperty]
-    private string _dungeonType5;
+    private int _location6Idx;
+    
+    [ObservableProperty]
+    private int _location7Idx;
 
     [ObservableProperty]
-    private string _dungeonType6;
+    private int _location8Idx;
+    
+    [ObservableProperty]
+    private int _location9Idx;
+    
+    [ObservableProperty]
+    private string? _dungeonType1;
 
     [ObservableProperty]
-    private string _dungeonType7;
+    private string? _dungeonType2;
 
     [ObservableProperty]
-    private string _dungeonType8;
+    private string? _dungeonType3;
 
     [ObservableProperty]
-    private string _dungeonType9;
+    private string? _dungeonType4;
 
     [ObservableProperty]
-    private string _dungeonType10;
+    private string? _dungeonType5;
 
     [ObservableProperty]
-    private string _dungeonType11;
+    private string? _dungeonType6;
 
     [ObservableProperty]
-    private string _dungeonType12;
+    private string? _dungeonType7;
+
+    [ObservableProperty]
+    private string? _dungeonType8;
+
+    [ObservableProperty]
+    private string? _dungeonType9;
+
+    [ObservableProperty]
+    private string? _dungeonType10;
+
+    [ObservableProperty]
+    private string? _dungeonType11;
+
+    [ObservableProperty]
+    private string? _dungeonType12;
+    
+    [ObservableProperty]
+    private int _dungeon1Idx;
+    
+    [ObservableProperty]
+    private int _dungeon2Idx;
+    
+    [ObservableProperty]
+    private int _dungeon3Idx;
+    
+    [ObservableProperty]
+    private int _dungeon4Idx;
+    
+    [ObservableProperty]
+    private int _dungeon5Idx;
+    
+    [ObservableProperty]
+    private int _dungeon6Idx;
+    
+    [ObservableProperty]
+    private int _dungeon7Idx;
+    
+    [ObservableProperty]
+    private int _dungeon8Idx;
+    
+    [ObservableProperty]
+    private int _dungeon9Idx;
+    
+    [ObservableProperty]
+    private int _dungeon10Idx;
+    
+    [ObservableProperty]
+    private int _dungeon11Idx;
+    
+    [ObservableProperty]
+    private int _dungeon12Idx;
     
     [ObservableProperty]
     private int _gsTokens;

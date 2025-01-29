@@ -160,7 +160,7 @@ public static class Resolver
         properties.IronBootsImage = ootData?.Equips?.Boots![1].DisabledSprite!;
         properties.HoverBootsImage = ootData?.Equips?.Boots![2].DisabledSprite!;
 
-        properties.KokiriSwordImage = ootData?.Equips?.Swords![0].EnabledSprite!;
+        properties.KokiriSwordImage = ootData?.Equips?.Swords![0].DisabledSprite!;
         properties.MasterSwordImage = ootData?.Equips?.Swords![1].DisabledSprite!;
         properties.BiggoronSwordImage = ootData?.Equips?.Swords![2].DisabledSprite!;
         

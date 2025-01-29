@@ -2,7 +2,6 @@
 using CommunityToolkit.Mvvm.Input;
 using EnKdev.ItemTrackers.Core;
 using EnKdev.ItemTrackers.Core.Logging;
-using EnKdev.ItemTrackers.Core.Services;
 using EnKdev.ItemTrackers.OoT.Commands;
 using EnKdev.ItemTrackers.OoT.Internal;
 using EnKdev.ItemTrackers.OoT.Models;
@@ -21,39 +20,16 @@ public partial class MainWindowViewModel : ObservableRecipient
     private int _quiverState;
     private int _bulletState;
 
-    private int _location1Idx;
-    private int _location2Idx;
-    private int _location3Idx;
-    private int _location4Idx;
-    private int _location5Idx;
-    private int _location6Idx;
-    private int _location7Idx;
-    private int _location8Idx;
-    private int _location9Idx;
-
-    private int _dungeon1Idx;
-    private int _dungeon2Idx;
-    private int _dungeon3Idx;
-    private int _dungeon4Idx;
-    private int _dungeon5Idx;
-    private int _dungeon6Idx;
-    private int _dungeon7Idx;
-    private int _dungeon8Idx;
-    private int _dungeon9Idx;
-    private int _dungeon10Idx;
-    private int _dungeon11Idx;
-    private int _dungeon12Idx;
-
     private int _hookState;
 
     private int _hpProg;
 
     private int _gsTokens;
 
-    private int _maxHeartContainers = 8;
-    private int _maxHeartPieces = 36;
-    private int _maxGsTokens = 100;
-    
+    private const int MaxHeartContainers = 8;
+    private const int MaxHeartPieces = 36;
+    private const int MaxGsTokens = 100;
+
     private TrackerData? _trackerData;
 
     private const int MaxForestKeysVanilla = 5;
@@ -124,29 +100,29 @@ public partial class MainWindowViewModel : ObservableRecipient
         _quiverState = 0;
         _scaleState = 0;
         _strengthState = 0;
+
+        TrackerProperties.Location1Idx = 0;
+        TrackerProperties.Location2Idx = 0;
+        TrackerProperties.Location3Idx = 0;
+        TrackerProperties.Location4Idx = 0;
+        TrackerProperties.Location5Idx = 0;
+        TrackerProperties.Location6Idx = 0;
+        TrackerProperties.Location7Idx = 0;
+        TrackerProperties.Location8Idx = 0;
+        TrackerProperties.Location9Idx = 0;
         
-        _location1Idx = 0;
-        _location2Idx = 0;
-        _location3Idx = 0;
-        _location4Idx = 0;
-        _location5Idx = 0;
-        _location6Idx = 0;
-        _location7Idx = 0;
-        _location8Idx = 0;
-        _location9Idx = 0;
-        
-        _dungeon1Idx = 0;
-        _dungeon2Idx = 0;
-        _dungeon3Idx = 0;
-        _dungeon4Idx = 0;
-        _dungeon5Idx = 0;
-        _dungeon6Idx = 0;
-        _dungeon7Idx = 0;
-        _dungeon8Idx = 0;
-        _dungeon9Idx = 0;
-        _dungeon10Idx = 0;
-        _dungeon11Idx = 0;
-        _dungeon12Idx = 0;
+        TrackerProperties.Dungeon1Idx = 0;
+        TrackerProperties.Dungeon2Idx = 0;
+        TrackerProperties.Dungeon3Idx = 0;
+        TrackerProperties.Dungeon4Idx = 0;
+        TrackerProperties.Dungeon5Idx = 0;
+        TrackerProperties.Dungeon6Idx = 0;
+        TrackerProperties.Dungeon7Idx = 0;
+        TrackerProperties.Dungeon8Idx = 0;
+        TrackerProperties.Dungeon9Idx = 0;
+        TrackerProperties.Dungeon10Idx = 0;
+        TrackerProperties.Dungeon11Idx = 0;
+        TrackerProperties.Dungeon12Idx = 0;
         
         _hookState = 0;
         _hpProg = 0;
@@ -163,48 +139,86 @@ public partial class MainWindowViewModel : ObservableRecipient
         _isCavernMq = false;
     }
     
-    // Commands
+    // ==================
+    // = OTHER COMMANDS =
+    // ==================
     [RelayCommand]
-    private void ToggleShard()
+    private void ToggleOther(string otherId)
     {
-        Logger.LogCommand(nameof(ToggleShardCommand));
-        CommandHandler.ToggleShard(TrackerProperties);
+        Logger.LogCommand(nameof(ToggleOtherCommand));
+        CommandHandler.ToggleOther(otherId, TrackerProperties);
     }
 
     [RelayCommand]
-    private void ToggleGerudoToken()
+    private void HandleGsCount(string action)
     {
-        Logger.LogCommand(nameof(ToggleGerudoTokenCommand));
-        CommandHandler.ToggleGerudoToken(TrackerProperties);
+        Logger.LogCommand(nameof(HandleGsCountCommand));
+
+        switch (action)
+        {
+            case "inc":
+                CommandHandler.IncreaseGoldSkulltulaCount(TrackerProperties, MaxGsTokens);
+                break;
+            case "dec":
+                CommandHandler.DecreaseGoldSkulltulaCount(TrackerProperties);
+                break;
+        }
     }
 
     [RelayCommand]
-    private void IncreaseGsCount()
+    private void HandleHearts(string action)
     {
-        Logger.LogCommand(nameof(IncreaseGsCountCommand));
-        CommandHandler.IncreaseGoldSkulltulaCount(TrackerProperties, _maxGsTokens);
+        Logger.LogCommand(nameof(HandleHeartsCommand));
+
+        switch (action)
+        {
+            case "hc":
+                CommandHandler.IncreaseHeartContainerCount(TrackerProperties, MaxHeartContainers);
+                break;
+            case "hp":
+                CommandHandler.ProgressHeartPiece(TrackerProperties, MaxHeartPieces);
+                ProcessHeartPieceProgression(TrackerProperties);
+                break;
+        }
+    }
+    
+    // ==============================
+    // = QUEST PROGRESSION COMMANDS =
+    // ==============================
+    [RelayCommand]
+    private void ToggleQuest(string progressionId)
+    {
+        Logger.LogCommand(nameof(ToggleQuestCommand));
+        CommandHandler.ToggleQuest(progressionId, TrackerProperties);
     }
 
     [RelayCommand]
-    private void DecreaseGsCount()
+    private void SetLocation(string progressionId)
     {
-        Logger.LogCommand(nameof(DecreaseGsCountCommand));
-        CommandHandler.DecreaseGoldSkulltulaCount(TrackerProperties);
+        Logger.LogCommand(nameof(SetLocationCommand));
+        CommandHandler.UpdateLocation(progressionId, TrackerProperties);
     }
+    
+    // =================
+    // = SONG COMMANDS =
+    // =================
 
     [RelayCommand]
-    private void IncreaseHeartContainerCount()
+    private void ToggleSong(string songId)
     {
-        Logger.LogCommand(nameof(IncreaseHeartContainerCountCommand));
-        CommandHandler.IncreaseHeartContainerCount(TrackerProperties, _maxHeartContainers);
+        Logger.LogCommand(nameof(ToggleSongCommand));
+        CommandHandler.ToggleSong(songId, TrackerProperties);
     }
+    
+    // ==================
+    // = EQUIP COMMANDS =
+    // ==================
 
     [RelayCommand]
-    private void ProgressHeartPiece()
+    private void ToggleEquip(string equipId)
     {
-        Logger.LogCommand(nameof(ProgressHeartPieceCommand));
-        CommandHandler.ProgressHeartPiece(TrackerProperties, _maxHeartPieces);
-        ProcessHeartPieceProgression(TrackerProperties);
+        Logger.LogCommand(nameof(ToggleEquipCommand));
+        CommandHandler.ToggleEquip(equipId, TrackerProperties);
     }
     
     // Util methods
