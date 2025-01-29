@@ -4,14 +4,12 @@ Two Trackers written in C# and XAML.
 Current Version (OoT): <b>3.0.0-build.5+1ab6df9</b><br/>
 Current Version (MM): <b>Not started yet</b>
 
-Next Version (OoT): <b>3.0.0-build.5+1ab6df9</b><br/>
+Next Version (OoT): <b>3.0.0-build.6+1bab039</b><br/>
 Next Version (MM): <b>1.0.0-build.1+16f4f58</b>
 <br/>
 
-### On plan for 3.0.0-build.5+1ab6df9 (OoT):
-- More UI Repopulation
-- More services
-- Switch to .NET 9
+### On plan for 3.0.0-build.6+1bab039 (OoT):
+- Getting the app back up to speed so new features can be fully implemented.
 
 ### On plan for 1.0.0-build.1+19c52c9 (MM):
 - Designing the UI screens (Masks, Dungeons, Items, Quest)
