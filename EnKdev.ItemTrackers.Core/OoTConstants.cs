@@ -18,7 +18,8 @@ public static class OoTConstants
 	    "pack://application:,,,/Icons/Other/NoHeartPiece.png",
 	    "pack://application:,,,/Icons/Other/HeartPiece1Quarter.png",
 	    "pack://application:,,,/Icons/Other/HeartPiece1Half.png",
-	    "pack://application:,,,/Icons/Other/HeartPiece3Thirds.png"
+	    "pack://application:,,,/Icons/Other/HeartPiece3Thirds.png",
+	    "pack://application:,,,/Icons/Other/HeartPieceFull.png"
     ];
     
     public const string ItemBg = "pack://application:,,,/Images/OoTTrackerItems.png";

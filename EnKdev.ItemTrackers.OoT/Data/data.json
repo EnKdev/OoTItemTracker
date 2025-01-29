@@ -71,12 +71,6 @@
       "disabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon_Disabled.png"
     },
     {
-      "id": "Itm_FrrWnd",
-      "name": "Farore's Wind",
-      "enabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon.png",
-      "disabled": "pack://application:,,,/Icons/Item/OoT3D_Farore's_Wind_Icon_Disabled.png"
-    },
-    {
       "id": "Itm_Lns",
       "name": "Lens of Truth",
       "enabled": "pack://application:,,,/Icons/Item/OoT3D_Lens_of_Truth_Icon.png",

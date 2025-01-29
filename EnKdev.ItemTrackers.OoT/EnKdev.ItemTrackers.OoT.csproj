@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <AssemblyName>EnKdev.ItemTrackers.OoT</AssemblyName>
     <RootNamespace>EnKdev.ItemTrackers.OoT</RootNamespace>
-    <LangVersion>12</LangVersion>
+    <LangVersion>13</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -278,6 +278,9 @@
     </Content>
     <Content Include="Icons\Other\HeartPiece3Thirds.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Other\HeartPieceFull.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Icons\Other\NoHeartPiece.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -770,10 +773,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EnKdev.ItemTrackers.Core\EnKdev.ItemTrackers.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Commands\" />
   </ItemGroup>
 
 </Project>

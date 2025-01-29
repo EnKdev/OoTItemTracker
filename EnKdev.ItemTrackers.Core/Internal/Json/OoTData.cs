@@ -107,6 +107,15 @@ public class OoTData
     public List<string>? Types { get; set; }
 
     /// <summary>
+    /// Represents a collection of trade-related objects used to track progression items
+    /// and events in the context of Ocarina of Time gameplay. This property categorizes
+    /// trades into specific child and adult trade sequences, providing structured data
+    /// for game state analysis and management.
+    /// </summary>
+    [JsonProperty("trades")]
+    public Trade? Trades { get; set; }
+
+    /// <summary>
     /// Represents a collection of "Other" objects, each containing an identifier,
     /// a name, and corresponding states that define whether an item is enabled or disabled.
     /// This property is used within the context of managing additional miscellaneous states

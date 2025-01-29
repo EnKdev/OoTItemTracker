@@ -81,6 +81,7 @@ public static class Resolver
         
         properties.HeartContainer = OoTConstants.HeartContainer;
         properties.HeartPiece = OoTConstants.HeartPiece;
+        properties.HeartPieceProgression = OoTConstants.HeartPieceProgression[0];
     }
 
     public static void ResolveKeyIcons(TrackerProperties properties)
@@ -193,5 +194,19 @@ public static class Resolver
         properties.HookshotImage = ootData?.Upgrades![19].Icons?.ItemDisabled!;
         properties.IceArrowImage = ootData?.Arrows![1].DisabledSprite!;
         properties.FaroresWindImage = ootData?.Items![3].DisabledSprite!;
+        properties.LensImage = ootData?.Items![4].DisabledSprite!;
+        properties.BombchuImage = ootData?.Items![0].DisabledSprite!;
+        properties.MegatonHammerImage = ootData?.Items![5].DisabledSprite!;
+        properties.NayrusLoveImage = ootData?.Items![6].DisabledSprite!;
+        properties.MagicBeansImage = ootData?.Items![7].DisabledSprite!;
+        properties.LightArrowImage = ootData?.Arrows![2].DisabledSprite!;
+        properties.AdultTradeItemImage = ootData?.Trades?.Adult![0].ItemDisabled!;
+        properties.ChildTradeItemImage = ootData?.Trades?.Child![0].ItemDisabled!;
+        properties.BoomerangImage = ootData?.Items![1].DisabledSprite!;
+        properties.OcarinaImage = ootData?.Upgrades![6].Icons?.ItemDisabled!;
+        properties.Bottle1Image = ootData?.Bottles![0].DisabledSprite!;
+        properties.Bottle2Image = ootData?.Bottles![1].DisabledSprite!;
+        properties.Bottle3Image = ootData?.Bottles![2].DisabledSprite!;
+        properties.Bottle4Image = ootData?.Bottles![3].DisabledSprite!;
     }
 }

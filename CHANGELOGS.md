@@ -113,6 +113,11 @@
 - Start repopulating the UI
 - Code fixes and further service implementations (Testing needed!)
 
+3.0.0-build.5+1ab6df9
+- More UI Repopulation
+- More services
+- Switch to .NET 9
+
 # Important notice:<br/>
 Previous made `trackerState` files from V2.0.0 are incompatible with V3.0.0.<br/>
 This is due to a major change of how data is represented internally.

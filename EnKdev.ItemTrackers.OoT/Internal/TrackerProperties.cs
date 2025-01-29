@@ -100,6 +100,9 @@ public partial class TrackerProperties : ObservableRecipient
 
     [ObservableProperty]
     private int _heartPieceCount;
+
+    [ObservableProperty]
+    private string _heartPieceProgression;
     
     [ObservableProperty] 
     private SolidColorBrush _forestKeyColor;

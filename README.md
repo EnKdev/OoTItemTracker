@@ -1,7 +1,7 @@
 # EnKdevs Ocarina of Time/Majora's Mask Trackers
 Two Trackers written in C# and XAML.
 
-Current Version (OoT): <b>3.0.0-build.4+b749f9</b><br/>
+Current Version (OoT): <b>3.0.0-build.5+1ab6df9</b><br/>
 Current Version (MM): <b>Not started yet</b>
 
 Next Version (OoT): <b>3.0.0-build.5+1ab6df9</b><br/>

@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="{Binding Title}" Height="1089" Width="715" FontFamily="{StaticResource 'FOT-Chiaro Std B'}" 
         Foreground="White" AllowsTransparency="True" WindowStyle="None" Background="Transparent"
-        MouseDown="MainWindow_OnMouseDown" ResizeMode="NoResize">
+        MouseDown="MainWindow_OnMouseDown" ResizeMode="NoResize" Topmost="True"
+        Deactivated="MainWindow_OnDeactivated">
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
@@ -168,7 +169,7 @@
             <TextBlock Text="{Binding TrackerProperties.Location8}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, -65, 0, 0"/>
             <TextBlock Text="{Binding TrackerProperties.Location9}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="165, -165, 0, 0"/>
             <!-- Heart Containers, Heart Pieces -->
-            <Image Source="{Binding TrackerProperties.HeartPiece}" Width="40" Margin="-100, 30, 0, 0">
+            <Image Source="{Binding TrackerProperties.HeartPiece}" Width="40" Margin="-120, 30, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding ProgressHeartPieceCommand}"/>
                 </Image.InputBindings>
@@ -179,8 +180,8 @@
                     <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseHeartContainerCountCommand}"/>
                 </Image.InputBindings>
             </Image>
-            <Image Source="{Binding TrackerProperties.HpIcon}" Width="40" Margin="-125, 30, 0, 0"/>
-            <TextBlock Text="{Binding TrackerProperties.HeartPieceCount}" Width="20" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-45, 173, 0, 0"/>
+            <Image Source="{Binding TrackerProperties.HeartPieceProgression}" Width="100" Margin="-18, -155, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.HeartPieceCount}" Width="25" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-45, 173, 0, 0"/>
         </Grid>
         <Grid Row="1" Column="0">
             <Image Source="{Binding TrackerProperties.GearBackground}" Height="350"/>
@@ -241,25 +242,16 @@
                 </Image.InputBindings>
             </Image>
             <!-- Upgradeables -->
-            <Image Source="{Binding TrackerProperties.BulletImage}" Width="60" Margin="-330, -180, 0, 0">
-                <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeBulletCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DowngradeBulletCommand}"/>
-                </Image.InputBindings>
-            </Image>
-            <Image Source="{Binding TrackerProperties.BombImage}" Width="60" Margin="-333, -55, 0, 0">
-                <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeBombCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DowngradeBombCommand}"/>
-                </Image.InputBindings>
-            </Image>
-            <Image Source="{Binding TrackerProperties.StrengthImage}" Width="50" Margin="-330, 70, 0, 0">
+            <Image Source="{Binding TrackerProperties.BulletImage}" Width="50" Margin="-330, -220, 0, 0"/>
+            <Image Source="{Binding TrackerProperties.BombImage}" Width="50" Margin="-333, -110, 0, 0"/>
+            <Image Source="{Binding TrackerProperties.QuiverImage}" Width="50" Margin="-333, 0, 0, 0"/>
+            <Image Source="{Binding TrackerProperties.StrengthImage}" Width="50" Margin="-330, 110, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeStrengthCommand}"/>
                     <MouseBinding Gesture="RightClick" Command="{Binding DowngradeStrengthCommand}"/>
                 </Image.InputBindings>
             </Image>
-            <Image Source="{Binding TrackerProperties.ScaleImage}" Width="50" Margin="-335, 180, 0, 0">
+            <Image Source="{Binding TrackerProperties.ScaleImage}" Width="50" Margin="-335, 220, 0, 0">
                 <Image.InputBindings>
                     <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeScaleCommand}"/>
                     <MouseBinding Gesture="RightClick" Command="{Binding DowngradeScaleCommand}"/>
