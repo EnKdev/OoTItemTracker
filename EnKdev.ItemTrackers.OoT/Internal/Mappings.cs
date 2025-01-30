@@ -6,127 +6,168 @@ namespace EnKdev.ItemTrackers.OoT.Internal;
 
 public static class Mappings
 {
-    private static readonly OoTData? OoTData = Globals.InstanceData; 
-    
+    private static readonly OoTData? OoTData = Globals.InstanceData;
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        ArrowMappings = new()
+        {
+            { "Arrow_Fire", (p => p.FireArrowImage, (p, val) => p.FireArrowImage = val!) },
+            { "Arrow_Ice", (p => p.IceArrowImage, (p, val) => p.IceArrowImage = val!) },
+            { "Arrow_Light", (p => p.LightArrowImage, (p, val) => p.LightArrowImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        BottleMappings = new()
+        {
+            { "Bottle1", (p => p.Bottle1Image, (p, val) => p.Bottle1Image = val!) },
+            { "Bottle2", (p => p.Bottle2Image, (p, val) => p.Bottle2Image = val!) },
+            { "Bottle3", (p => p.Bottle3Image, (p, val) => p.Bottle3Image = val!) },
+            { "Bottle4", (p => p.Bottle4Image, (p, val) => p.Bottle4Image = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, int>? GetState, Action<TrackerProperties, int>? SetState,
+            Func<TrackerProperties, string?> GetSprite, Action<TrackerProperties, string?> SetSprite)>
+        ItemMappings = new()
+        {
+            { "Item_Bombchu", (null, null, p => p.BombchuImage, (p, val) => p.BombchuImage = val!) },
+            { "Item_Boomerang", (null, null, p => p.BoomerangImage, (p, val) => p.BoomerangImage = val!) },
+            { "Item_DinsFire", (null, null, p => p.DinsFireImage, (p, val) => p.DinsFireImage = val!) },
+            { "Item_FaroresWind", (null, null, p => p.FaroresWindImage, (p, val) => p.FaroresWindImage = val!) },
+            { "Item_Lens", (null, null, p => p.LensImage, (p, val) => p.LensImage = val!) },
+            { "Item_Hammer", (null, null, p => p.MegatonHammerImage, (p, val) => p.MegatonHammerImage = val!) },
+            { "Item_NayrusLove", (null, null, p => p.NayrusLoveImage, (p, val) => p.NayrusLoveImage = val!) },
+            { "Item_MagicBeans", (null, null, p => p.MagicBeansImage, (p, val) => p.MagicBeansImage = val!) },
+            {
+                "Item_FairyOcarina",
+                (p => p.OcarinaState, (p, state) => p.OcarinaState = state, p => p.OcarinaImage,
+                    (p, val) => p.OcarinaImage = val!)
+            },
+            {
+                "Item_OcarinaOfTime",
+                (p => p.OcarinaState, (p, state) => p.OcarinaState = state, p => p.OcarinaImage,
+                    (p, val) => p.OcarinaImage = val!)
+            },
+            {
+                "Item_Hookshot",
+                (p => p.HookState, (p, state) => p.HookState = state, p => p.HookshotImage,
+                    (p, val) => p.HookshotImage = val!)
+            },
+            {
+                "Item_Longshot",
+                (p => p.HookState, (p, state) => p.HookState = state, p => p.HookshotImage,
+                    (p, val) => p.HookshotImage = val!)
+            },
+            { "Item_DekuNuts", (null, null, p => p.NutImage, (p, val) => p.NutImage = val!) },
+            { "Item_DekuStick", (null, null, p => p.StickImage, (p, val) => p.StickImage = val!) },
+            { "Item_Bomb", (null, null, p => p.BombItemImage, (p, val) => p.BombItemImage = val!) },
+            { "Item_Slingshot", (null, null, p => p.SlingshotImage, (p, val) => p.SlingshotImage = val!) },
+            { "Item_Bow", (null, null, p => p.BowImage, (p, val) => p.BowImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, int> GetState, Action<TrackerProperties, int> SetState,
+            Func<TrackerProperties, string?> GetGearSprite, Action<TrackerProperties, string?> SetGearSprite,
+            string? AssociatedItem)>
+        GearMappings = new()
+        {
+            {
+                "Gear_BombBag", (p => p.BombState, (p, state) => p.BombState = state,
+                    p => p.BombImage, (p, val) => p.BombImage = val!,
+                    "Item_Bomb")
+            },
+            {
+                "Gear_BigBombBag", (p => p.BombState, (p, state) => p.BombState = state,
+                    p => p.BombImage, (p, val) => p.BombImage = val!,
+                    null)
+            },
+            {
+                "Gear_BiggestBombBag", (p => p.BombState, (p, state) => p.BombState = state,
+                    p => p.BombImage, (p, val) => p.BombImage = val!,
+                    null)
+            },
+            {
+                "Gear_BulletBag30", (p => p.BulletState, (p, state) => p.BulletState = state,
+                    p => p.BulletImage, (p, val) => p.BulletImage = val!,
+                    "Item_Slingshot")
+            },
+            {
+                "Gear_BulletBag40", (p => p.BulletState, (p, state) => p.BulletState = state,
+                    p => p.BulletImage, (p, val) => p.BulletImage = val!,
+                    null)
+            },
+            {
+                "Gear_BulletBag50", (p => p.BulletState, (p, state) => p.BulletState = state,
+                    p => p.BulletImage, (p, val) => p.BulletImage = val!,
+                    null)
+            },
+            {
+                "Gear_Bracelet", (p => p.StrengthState, (p, state) => p.StrengthState = state,
+                    p => p.StrengthImage, (p, val) => p.StrengthImage = val!,
+                    null)
+            },
+            {
+                "Gear_SilverGauntlets", (p => p.StrengthState, (p, state) => p.StrengthState = state,
+                    p => p.StrengthImage, (p, val) => p.StrengthImage = val!,
+                    null)
+            },
+            {
+                "Gear_GoldenGauntlets", (p => p.StrengthState, (p, state) => p.StrengthState = state,
+                    p => p.StrengthImage, (p, val) => p.StrengthImage = val!,
+                    null)
+            },
+            {
+                "Gear_Quiver", (p => p.QuiverState, (p, state) => p.QuiverState = state,
+                    p => p.QuiverImage, (p, val) => p.QuiverImage = val!,
+                    "Item_Bow")
+            },
+            {
+                "Gear_BigQuiver", (p => p.QuiverState, (p, state) => p.QuiverState = state,
+                    p => p.QuiverImage, (p, val) => p.QuiverImage = val!,
+                    null)
+            },
+            {
+                "Gear_BiggestQuiver", (p => p.QuiverState, (p, state) => p.QuiverState = state,
+                    p => p.QuiverImage, (p, val) => p.QuiverImage = val!,
+                    null)
+            },
+            {
+                "Gear_SilverScale", (p => p.ScaleState, (p, state) => p.ScaleState = state,
+                    p => p.ScaleImage, (p, val) => p.ScaleImage = val!,
+                    null)
+            },
+            {
+                "Gear_GoldenScale", (p => p.ScaleState, (p, state) => p.ScaleState = state,
+                    p => p.ScaleImage, (p, val) => p.ScaleImage = val!,
+                    null)
+            }
+        };
+
     private static readonly
         Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         QuestMappings = new()
         {
-            { "Adult_LghtMd", (p => p.LightMedallionImage, (p, val) => p.LightMedallionImage = val!) },
-            { "Adult_FrstMd", (p => p.ForestMedallionImage, (p, val) => p.ForestMedallionImage = val!) },
-            { "Adult_FrMd", (p => p.FireMedallionImage, (p, val) => p.FireMedallionImage = val!) },
-            { "Adult_WtrMd", (p => p.WaterMedallionImage, (p, val) => p.WaterMedallionImage = val!) },
-            { "Adult_ShdwMd", (p => p.ShadowMedallionImage, (p, val) => p.ShadowMedallionImage = val!) },
-            { "Adult_SprtMd", (p => p.SpiritMedallionImage, (p, val) => p.SpiritMedallionImage = val!) },
-            { "Child_Emerald", (p => p.KokiriEmeraldImage, (p, val) => p.KokiriEmeraldImage = val!) },
-            { "Child_Ruby", (p => p.GoronRubyImage, (p, val) => p.GoronRubyImage = val!) },
-            { "Child_Sapphire", (p => p.ZoraSapphireImage, (p, val) => p.ZoraSapphireImage = val!) }
+            { "Progression_LightMedallion", (p => p.LightMedallionImage, (p, val) => p.LightMedallionImage = val!) },
+            { "Progression_ForestMedallion", (p => p.ForestMedallionImage, (p, val) => p.ForestMedallionImage = val!) },
+            { "Progression_FireMedallion", (p => p.FireMedallionImage, (p, val) => p.FireMedallionImage = val!) },
+            { "Progression_WaterMedallion", (p => p.WaterMedallionImage, (p, val) => p.WaterMedallionImage = val!) },
+            { "Progression_ShadowMedallion", (p => p.ShadowMedallionImage, (p, val) => p.ShadowMedallionImage = val!) },
+            { "Progression_SpiritMedallion", (p => p.SpiritMedallionImage, (p, val) => p.SpiritMedallionImage = val!) },
+            { "Progression_KokiriEmerald", (p => p.KokiriEmeraldImage, (p, val) => p.KokiriEmeraldImage = val!) },
+            { "Progression_GoronRuby", (p => p.GoronRubyImage, (p, val) => p.GoronRubyImage = val!) },
+            { "Progression_ZorasSapphire", (p => p.ZoraSapphireImage, (p, val) => p.ZoraSapphireImage = val!) }
         };
 
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        OtherMappings = new()
-        {
-            { "Othr_Shard", (p => p.ShardImage, (p, val) => p.ShardImage = val!) },
-            { "Othr_Token", (p => p.GerudoTokenImage, (p, val) => p.GerudoTokenImage = val!) }
-        };
-
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        SongMappings = new()
-        {
-            { "Sng_Lul", (p => p.LullabyImage, (p, val) => p.LullabyImage = val!) },
-            { "Sng_Epo", (p => p.EponaImage, (p, val) => p.EponaImage = val!) },
-            { "Sng_Sar", (p => p.SariaImage, (p, val) => p.SariaImage = val!) },
-            { "Sng_SoS", (p => p.SosImage, (p, val) => p.SosImage = val!) },
-            { "Sng_Sun", (p => p.SunsImage, (p, val) => p.SunsImage = val!) },
-            { "Sng_SoT", (p => p.SotImage, (p, val) => p.SotImage = val!) },
-            { "Sng_Min", (p => p.MinuetImage, (p, val) => p.MinuetImage = val!) },
-            { "Sng_Bol", (p => p.BoleroImage, (p, val) => p.BoleroImage = val!) },
-            { "Sng_Ser", (p => p.SerenadeImage, (p, val) => p.SerenadeImage = val!) },
-            { "Sng_Req", (p => p.RequiemImage, (p, val) => p.RequiemImage = val!) },
-            { "Sng_Noc", (p => p.NocturneImage, (p, val) => p.NocturneImage = val!) },
-            { "Sng_Pre", (p => p.PreludeImage, (p, val) => p.PreludeImage = val!) }
-        };
-
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        EquipMappings = new()
-        {
-            { "Eqp_Boots2", (p => p.IronBootsImage, (p, val) => p.IronBootsImage = val!) },
-            { "Eqp_Boots3", (p => p.HoverBootsImage, (p, val) => p.HoverBootsImage = val!) },
-            { "Eqp_Sword1", (p => p.KokiriSwordImage, (p, val) => p.KokiriSwordImage = val!) },
-            { "Eqp_Sword2", (p => p.MasterSwordImage, (p, val) => p.MasterSwordImage = val!) },
-            { "Eqp_Sword3", (p => p.BiggoronSwordImage, (p, val) => p.BiggoronSwordImage = val!) },
-            { "Eqp_Shield1", (p => p.DekuShieldImage, (p, val) => p.DekuShieldImage = val!) },
-            { "Eqp_Shield2", (p => p.HylianShieldImage, (p, val) => p.HylianShieldImage = val!) },
-            { "Eqp_Shield3", (p => p.MirrorShieldImage, (p, val) => p.MirrorShieldImage = val!) },
-            { "Eqp_Tunic2", (p => p.GoronTunicImage, (p, val) => p.GoronTunicImage = val!) },
-            { "Eqp_Tunic3", (p => p.ZoraTunicImage, (p, val) => p.ZoraTunicImage = val!) }
-        };
-
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        UpgradeGearMappings = new()
-        {
-            { "Upg_Bmb_Base", (p => p.BombImage, (p, val) => p.BombImage = val!) },
-            { "Upg_Bmb_1", (p => p.BombImage, (p, val) => p.BombImage = val!) },
-            { "Upg_Bmb_2", (p => p.BombImage, (p, val) => p.BombImage = val!) },
-
-            { "Upg_Slngsht_Base", (p => p.BulletImage, (p, val) => p.BulletImage = val!) },
-            { "Upg_Slngsht_1", (p => p.BulletImage, (p, val) => p.BulletImage = val!) },
-            { "Upg_Slngsht_2", (p => p.BulletImage, (p, val) => p.BulletImage = val!) },
-
-            { "Upg_Strngth_Base", (p => p.StrengthImage, (p, val) => p.StrengthImage = val!) },
-            { "Upg_Strngth_1", (p => p.StrengthImage, (p, val) => p.StrengthImage = val!) },
-            { "Upg_Strngth_2", (p => p.StrengthImage, (p, val) => p.StrengthImage = val!) },
-
-            { "Upg_Bw_Base", (p => p.QuiverImage, (p, val) => p.QuiverImage = val!) },
-            { "Upg_Bw_1", (p => p.QuiverImage, (p, val) => p.QuiverImage = val!) },
-            { "Upg_Bw_2", (p => p.QuiverImage, (p, val) => p.QuiverImage = val!) },
-
-            { "Upg_Scl_Base", (p => p.ScaleImage, (p, val) => p.ScaleImage = val!) },
-            { "Upg_Scl_1", (p => p.ScaleImage, (p, val) => p.ScaleImage = val!) }
-        };
-
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        UpgradeItemMappings = new()
-        {
-            { "Upg_Bmb_Base", (p => p.BombItemImage, (p, val) => p.BombItemImage = val!) },
-            { "Upg_Bmb_1", (p => p.BombItemImage, (p, val) => p.BombItemImage = val!) },
-            { "Upg_Bmb_2", (p => p.BombItemImage, (p, val) => p.BombItemImage = val!) },
-
-            { "Upg_Slngsht_Base", (p => p.SlingshotImage, (p, val) => p.SlingshotImage = val!) },
-            { "Upg_Slngsht_1", (p => p.SlingshotImage, (p, val) => p.SlingshotImage = val!) },
-            { "Upg_Slngsht_2", (p => p.SlingshotImage, (p, val) => p.SlingshotImage = val!) },
-
-            { "Upg_Ocrn_Base", (p => p.OcarinaImage, (p, val) => p.OcarinaImage = val!) },
-            { "Upg_Ocrn_1", (p => p.OcarinaImage, (p, val) => p.OcarinaImage = val!) },
-
-            { "Upg_Bw_Base", (p => p.BowImage, (p, val) => p.BowImage = val!) },
-            { "Upg_Bw_1", (p => p.BowImage, (p, val) => p.BowImage = val!) },
-            { "Upg_Bw_2", (p => p.BowImage, (p, val) => p.BowImage = val!) },
-
-            { "Upg_Hksht_Base", (p => p.HookshotImage, (p, val) => p.HookshotImage = val!) },
-            { "Upg_Hksht_1", (p => p.HookshotImage, (p, val) => p.HookshotImage = val!) },
-
-            { "Upg_DkNt_Base", (p => p.NutImage, (p, val) => p.NutImage = val!) },
-            { "Upg_DkNt_1", (p => p.NutImage, (p, val) => p.NutImage = val!) },
-            { "Upg_DkNt_2", (p => p.NutImage, (p, val) => p.NutImage = val!) },
-
-            { "Upg_DkStck_Base", (p => p.StickImage, (p, val) => p.StickImage = val!) },
-            { "Upg_DkStck_1", (p => p.StickImage, (p, val) => p.StickImage = val!) },
-            { "Upg_DkStck_2", (p => p.StickImage, (p, val) => p.StickImage = val!) }
-        };
-
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
+    private static readonly Dictionary<string,
+            (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
             Func<TrackerProperties, string?>, Action<TrackerProperties, string?>,
-            Func<int, string?>, int)> LocationMappings = new()
+            Func<int, string?>, int)>
+        LocationMappings = new()
         {
             {
-                "Adult_LghtMd",
+                "Progression_LightMedallion",
                 (p => p.Location4Idx, (p, idx) => p.Location4Idx = idx,
                     p => p.Location4, (p, loc) => p.Location4 = loc,
                     idx => idx switch
@@ -145,7 +186,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Adult_FrstMd",
+                "Progression_ForestMedallion",
                 (p => p.Location5Idx, (p, idx) => p.Location5Idx = idx,
                     p => p.Location5, (p, loc) => p.Location5 = loc,
                     idx => idx switch
@@ -164,7 +205,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Adult_FrMd",
+                "Progression_FireMedallion",
                 (p => p.Location6Idx, (p, idx) => p.Location6Idx = idx,
                     p => p.Location6, (p, loc) => p.Location6 = loc,
                     idx => idx switch
@@ -183,7 +224,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Adult_WtrMd",
+                "Progression_WaterMedallion",
                 (p => p.Location7Idx, (p, idx) => p.Location7Idx = idx,
                     p => p.Location7, (p, loc) => p.Location7 = loc,
                     idx => idx switch
@@ -202,7 +243,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Adult_ShdwMd",
+                "Progression_ShadowMedallion",
                 (p => p.Location9Idx, (p, idx) => p.Location9Idx = idx,
                     p => p.Location9, (p, loc) => p.Location9 = loc,
                     idx => idx switch
@@ -221,7 +262,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Adult_SprtMd",
+                "Progression_SpiritMedallion",
                 (p => p.Location8Idx, (p, idx) => p.Location8Idx = idx,
                     p => p.Location8, (p, loc) => p.Location8 = loc,
                     idx => idx switch
@@ -240,7 +281,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Child_Emerald",
+                "Progression_KokiriEmerald",
                 (p => p.Location1Idx, (p, idx) => p.Location1Idx = idx,
                     p => p.Location1, (p, loc) => p.Location1 = loc,
                     idx => idx switch
@@ -259,7 +300,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Child_Ruby",
+                "Progression_GoronRuby",
                 (p => p.Location2Idx, (p, idx) => p.Location2Idx = idx,
                     p => p.Location2, (p, loc) => p.Location2 = loc,
                     idx => idx switch
@@ -278,7 +319,7 @@ public static class Mappings
                     }, 9)
             },
             {
-                "Child_Sapphire",
+                "Progression_ZorasSapphire",
                 (p => p.Location3Idx, (p, idx) => p.Location3Idx = idx,
                     p => p.Location3, (p, loc) => p.Location3 = loc,
                     idx => idx switch
@@ -298,92 +339,120 @@ public static class Mappings
             }
         };
 
-    /// <summary>
-    /// Retrieves the dictionary containing quest mappings, where each mapping consists
-    /// of a key-value pair. The key is a string identifier for a progression, and the
-    /// value is a tuple containing a getter and setter for the respective tracker property.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of quest mappings with string keys and value tuples, where each tuple
-    /// includes a function to get a property value and an action to set a property value.
-    /// </returns>
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        EquipMappings = new()
+        {
+            { "Equip_Boots_Iron", (p => p.IronBootsImage, (p, val) => p.IronBootsImage = val!) },
+            { "Equip_Boots_Hover", (p => p.HoverBootsImage, (p, val) => p.HoverBootsImage = val!) },
+            { "Equip_Sword_Kokiri", (p => p.KokiriSwordImage, (p, val) => p.KokiriSwordImage = val!) },
+            { "Equip_Sword_Master", (p => p.MasterSwordImage, (p, val) => p.MasterSwordImage = val!) },
+            { "Equip_Sword_Biggoron", (p => p.BiggoronSwordImage, (p, val) => p.BiggoronSwordImage = val!) },
+            { "Equip_Shield_Deku", (p => p.DekuShieldImage, (p, val) => p.DekuShieldImage = val!) },
+            { "Equip_Shield_Hylian", (p => p.HylianShieldImage, (p, val) => p.HylianShieldImage = val!) },
+            { "Equip_Shield_Mirror", (p => p.MirrorShieldImage, (p, val) => p.MirrorShieldImage = val!) },
+            { "Equip_Tunic_Goron", (p => p.GoronTunicImage, (p, val) => p.GoronTunicImage = val!) },
+            { "Equip_Tunic_Zora", (p => p.ZoraTunicImage, (p, val) => p.ZoraTunicImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        SongMappings = new()
+        {
+            { "Song_Lullaby", (p => p.LullabyImage, (p, val) => p.LullabyImage = val!) },
+            { "Song_Epona", (p => p.EponaImage, (p, val) => p.EponaImage = val!) },
+            { "Song_Saria", (p => p.SariaImage, (p, val) => p.SariaImage = val!) },
+            { "Song_Storms", (p => p.SosImage, (p, val) => p.SosImage = val!) },
+            { "Song_Suns", (p => p.SunsImage, (p, val) => p.SunsImage = val!) },
+            { "Song_Time", (p => p.SotImage, (p, val) => p.SotImage = val!) },
+            { "Song_Minuet", (p => p.MinuetImage, (p, val) => p.MinuetImage = val!) },
+            { "Song_Bolero", (p => p.BoleroImage, (p, val) => p.BoleroImage = val!) },
+            { "Song_Serenade", (p => p.SerenadeImage, (p, val) => p.SerenadeImage = val!) },
+            { "Song_Nocturne", (p => p.NocturneImage, (p, val) => p.NocturneImage = val!) },
+            { "Song_Requiem", (p => p.RequiemImage, (p, val) => p.RequiemImage = val!) },
+            { "Song_Prelude", (p => p.PreludeImage, (p, val) => p.PreludeImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        ChildTradeMappings = new()
+        {
+            { "Trade_Child_WeirdEgg", (p => p.ChildTradeItemImage, (p, val) => p.ChildTradeItemImage = val!) },
+            { "Trade_Child_Cucco", (p => p.ChildTradeItemImage, (p, val) => p.ChildTradeItemImage = val!) },
+            { "Trade_Child_ZeldasLetter", (p => p.ChildTradeItemImage, (p, val) => p.ChildTradeItemImage = val!) },
+            { "Trade_Child_SkullMask", (p => p.ChildTradeItemImage, (p, val) => p.ChildTradeItemImage = val!) },
+            { "Trade_Child_MaskOfTruth", (p => p.ChildTradeItemImage, (p, val) => p.ChildTradeItemImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        AdultTradeMappings = new()
+        {
+            { "Trade_Adult_PocketEgg", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_PocketCucco", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Cojiro", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Mushroom", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Poultice", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Saw", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Knife", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_BGS", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Prescription", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Frog", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Drops", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) },
+            { "Trade_Adult_Check", (p => p.AdultTradeItemImage, (p, val) => p.AdultTradeItemImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        OtherMappings = new()
+        {
+            { "Other_Token", (p => p.GerudoTokenImage, (p, val) => p.GerudoTokenImage = val!) },
+            { "Other_Shard", (p => p.ShardImage, (p, val) => p.ShardImage = val!) }
+        };
+    
+    // TODO: Figure Vanilla/MQ Dungeon Mappings out
+    
+    // ----
+    
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetArrowMappings() => ArrowMappings;
+
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetBottleMappings() => BottleMappings;
+    
+    public static
+        Dictionary<string, (Func<TrackerProperties, int>? GetState, Action<TrackerProperties, int>? SetState,
+            Func<TrackerProperties, string?> GetSprite, Action<TrackerProperties, string?> SetSprite)>
+        GetItemMappings() => ItemMappings;
+    
+    public static 
+        Dictionary<string, (Func<TrackerProperties, int> GetState, Action<TrackerProperties, int> SetState,
+            Func<TrackerProperties, string?> GetGearSprite, Action<TrackerProperties, string?> SetGearSprite,
+            string? AssociatedItem)>
+        GetGearMappings() => GearMappings;
+    
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetQuestMappings() => QuestMappings;
-
-    /// <summary>
-    /// Retrieves the dictionary containing other mappings, where each mapping consists
-    /// of a key-value pair. The key is a string identifier for an item, and the value is
-    /// a tuple containing a getter and setter for the respective tracker property.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of other mappings with string keys and value tuples, where each tuple
-    /// includes a function to get a property value and an action to set a property value.
-    /// </returns>
-    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        GetOtherMappings() => OtherMappings;
-
-    /// <summary>
-    /// Retrieves the dictionary containing song mappings, where each mapping consists
-    /// of a key-value pair. The key is a string identifier for a specific song, and the
-    /// value is a tuple containing a getter and setter for the respective tracker property.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of song mappings with string keys and value tuples, where each tuple
-    /// includes a function to get a property value and an action to set a property value.
-    /// </returns>
-    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        GetSongMappings() => SongMappings;
-
-    /// <summary>
-    /// Retrieves the dictionary containing location mappings, where each mapping consists
-    /// of a key-value pair. The key is a string identifier for a location, and the value is
-    /// a tuple containing functions and actions for getting and setting integer and string
-    /// properties, as well as additional metadata.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of location mappings with string keys and value tuples, where each tuple
-    /// includes functions to get and set integer and string properties, a function to convert
-    /// an integer to a string representation, and an integer denoting metadata.
-    /// </returns>
-    public static Dictionary<string, (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
+    
+    public static Dictionary<string,
+        (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
         Func<TrackerProperties, string?>, Action<TrackerProperties, string?>,
-        Func<int, string?>, int)> GetLocationMappings() => LocationMappings;
-
-    /// <summary>
-    /// Retrieves the dictionary containing equip mappings, where each mapping consists
-    /// of a key-value pair. The key represents an equip item identifier, and the value
-    /// is a tuple containing a function to get the corresponding property value and
-    /// an action to set the property value.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of equip mappings with string keys and value tuples, where each tuple
-    /// includes a getter function and a setter action for equip-related tracker properties.
-    /// </returns>
+        Func<int, string?>, int)>
+        GetLocationMappings() => LocationMappings;
+        
+    
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetEquipMappings() => EquipMappings;
-
-    /// <summary>
-    /// Retrieves the dictionary containing upgrade item mappings, where each mapping consists
-    /// of a key-value pair. The key is a string identifier for a specific upgrade item, and the
-    /// value is a tuple containing a function to get the corresponding tracker property value
-    /// and an action to set the tracker property value.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of upgrade item mappings with string keys and value tuples, where each tuple
-    /// includes a function to retrieve a property value and an action to update the property value.
-    /// </returns>
+    
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        GetUpgradeItemMappings() => UpgradeItemMappings;
-
-    /// <summary>
-    /// Retrieves the dictionary containing upgrade gear mappings, where each mapping consists
-    /// of a key-value pair. The key is a string identifier for an upgrade gear type, and the
-    /// value is a tuple containing a function to get a property value and an action to set a property value.
-    /// </summary>
-    /// <returns>
-    /// A dictionary of upgrade gear mappings with string keys and tuple values, where each tuple
-    /// includes a getter function and a setter action for managing upgrade gear properties in the tracker.
-    /// </returns>
+        GetSongMappings() => SongMappings;
+    
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        GetUpgradeGearMappings() => UpgradeGearMappings;
+        GetChildTradeMappings() => ChildTradeMappings;
+
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetAdultTradeMappings() => AdultTradeMappings;
+    
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetOtherMappings() => OtherMappings;
 }

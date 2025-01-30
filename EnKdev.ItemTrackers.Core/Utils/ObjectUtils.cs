@@ -75,14 +75,13 @@ public static class ObjectUtils
         => data?.Songs?.FirstOrDefault(x => x.Id == id);
 
     /// <summary>
-    /// Retrieves an object of type <see cref="Upgrade"/> by its unique identifier
-    /// from the provided <see cref="OoTData"/>.
+    /// Retrieves an object of type <see cref="Gear"/> by its unique identifier from the provided <see cref="OoTData"/>.
     /// </summary>
-    /// <param name="id">The unique identifier of the upgrade to retrieve.</param>
+    /// <param name="id">The unique identifier of the gear object to retrieve.</param>
     /// <param name="data">The <see cref="OoTData"/> collection to search within.</param>
-    /// <returns>The matching <see cref="Upgrade"/> object if found; otherwise, null.</returns>
-    public static Upgrade? GetUpgradeObjectById(string id, OoTData? data)
-        => data?.Upgrades?.FirstOrDefault(x => x.Id == id);
+    /// <returns>The matching <see cref="Gear"/> object if found; otherwise, null.</returns>
+    public static Gear? GetGearObjectById(string id, OoTData? data)
+        => data?.Gear?.FirstOrDefault(x => x.Id == id);
 
     /// <summary>
     /// Retrieves a <see cref="VanillaDungeon"/> object by its unique identifier from the provided <see cref="OoTData"/>.

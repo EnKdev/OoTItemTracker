@@ -1,7 +1,7 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using EnKdev.ItemTrackers.Core.Internal.Json;
 using EnKdev.ItemTrackers.Core.Logging;
-using EnKdev.ItemTrackers.Core.Services;
 using EnKdev.ItemTrackers.Core.Sprites;
 using EnKdev.ItemTrackers.Core.Utils;
 using EnKdev.ItemTrackers.OoT.Internal;
@@ -11,13 +11,7 @@ namespace EnKdev.ItemTrackers.OoT.Commands;
 public static class CommandHandler
 {
     private static readonly OoTData? OoTData = Globals.InstanceData;
-    
-    private static readonly ArrowService ArrowService = new();
-    private static readonly BottleService BottleService = new();
-    private static readonly DungeonService DungeonService = new();
-    private static readonly ItemService ItemService = new();
-    
-    
+
     // ==================
     // = OTHER COMMANDS =
     // ==================
@@ -35,24 +29,24 @@ public static class CommandHandler
     public static void IncreaseGoldSkulltulaCount(TrackerProperties properties, int maxCount)
     {
         Logger.LogInformation("Increasing Gold Skulltula count.");
-        
+
         // Cap at the max token count. (100)
         if (properties.GsTokens == maxCount)
         {
             properties.GsTokens = maxCount;
         }
         else
-        { 
-            properties.GsTokens++;   
+        {
+            properties.GsTokens++;
         }
-        
+
         Logger.LogInteraction(nameof(properties.GsTokens));
     }
 
     public static void DecreaseGoldSkulltulaCount(TrackerProperties properties)
     {
         Logger.LogInformation("Decreasing Gold Skulltula count.");
-        
+
         // Cap at the min token count. (0)
         if (properties.GsTokens == 0)
         {
@@ -60,16 +54,16 @@ public static class CommandHandler
         }
         else
         {
-            properties.GsTokens--;   
+            properties.GsTokens--;
         }
-        
+
         Logger.LogInteraction(nameof(properties.GsTokens));
     }
 
     public static void IncreaseHeartContainerCount(TrackerProperties properties, int maxCount)
     {
         Logger.LogInformation("Increasing Heart Container count.");
-        
+
         // Cap at the max container count. (8)
         if (properties.HeartContainerCount == maxCount)
         {
@@ -77,16 +71,16 @@ public static class CommandHandler
         }
         else
         {
-            properties.HeartContainerCount++;   
+            properties.HeartContainerCount++;
         }
-        
+
         Logger.LogInteraction(nameof(properties.HeartContainerCount));
     }
 
     public static void ProgressHeartPiece(TrackerProperties properties, int maxHeartPieceCount)
     {
         Logger.LogInformation("Progressing Heart Piece.");
-        
+
         // Cap at the max heart piece count. (36)
         if (properties.HeartPieceCount == maxHeartPieceCount)
         {
@@ -96,10 +90,10 @@ public static class CommandHandler
         {
             properties.HeartPieceCount++;
         }
-        
+
         Logger.LogInteraction(nameof(properties.HeartPieceCount));
     }
-    
+
     // =====================
     // = QUEST PROGRESSION =
     // =====================
@@ -136,7 +130,7 @@ public static class CommandHandler
             Logger.LogInformation($"Invalid quest item: {questItem}.");
         }
     }
-    
+
     // =================
     // = SONG COMMANDS =
     // =================
@@ -151,7 +145,7 @@ public static class CommandHandler
                 SpriteUtils.GetState, Logger.LogInformation);
         }
     }
-    
+
     // ==================
     // = EQUIP COMMANDS =
     // ==================
@@ -191,4 +185,10 @@ public static class CommandHandler
             }
         }
     }
+
+    // ====================
+    // = UPGRADE COMMANDS =
+    // ====================
+    
+    // TODO: Write handler logic for this.
 }

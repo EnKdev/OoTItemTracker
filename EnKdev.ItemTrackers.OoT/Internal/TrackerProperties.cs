@@ -163,6 +163,66 @@ public partial class TrackerProperties : ObservableRecipient
 
     [ObservableProperty]
     private int _heartPieceCount;
+    
+    [ObservableProperty]
+    private int _ocarinaState;
+    
+    [ObservableProperty]
+    private int _scaleState;
+    
+    [ObservableProperty]
+    private int _strengthState;
+
+    [ObservableProperty]
+    private int _quiverState;
+
+    [ObservableProperty]
+    private int _bombState;
+
+    [ObservableProperty]
+    private int _bulletState;
+
+    [ObservableProperty]
+    private int _hookState;
+
+    [ObservableProperty]
+    private int _hpProg;
+
+    [ObservableProperty]
+    private bool _isDekuMq;
+    
+    [ObservableProperty]
+    private bool _isDcMq;
+    
+    [ObservableProperty]
+    private bool _isJabuMq;
+    
+    [ObservableProperty]
+    private bool _isForestMq;
+    
+    [ObservableProperty]
+    private bool _isFireMq;
+    
+    [ObservableProperty]
+    private bool _isWaterMq;
+    
+    [ObservableProperty]
+    private bool _isShadowMq;
+    
+    [ObservableProperty]
+    private bool _isSpiritMq;
+    
+    [ObservableProperty]
+    private bool _isBottomMq;
+    
+    [ObservableProperty]
+    private bool _isCavernMq;
+    
+    [ObservableProperty]
+    private bool _isGanonMq;
+
+    [ObservableProperty]
+    private bool _isGtgMq;
 
     [ObservableProperty]
     private string _heartPieceProgression;

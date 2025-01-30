@@ -1,43 +1,40 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using EnKdev.ItemTrackers.Core;
+﻿using EnKdev.ItemTrackers.Core;
+using EnKdev.ItemTrackers.Core.Internal.Json;
 using EnKdev.ItemTrackers.OoT.Internal;
 
 namespace EnKdev.ItemTrackers.OoT;
 
 public static class Resolver
 {
+    private static readonly OoTData? OoTData = Globals.InstanceData;
+    
     public static void ResolveDefaultLocations(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
-
-        properties.Location1 = ootData?.Locations![0]!;
-        properties.Location2 = ootData?.Locations![0]!;
-        properties.Location3 = ootData?.Locations![0]!;
-        properties.Location4 = ootData?.Locations![0]!;
-        properties.Location5 = ootData?.Locations![0]!;
-        properties.Location6 = ootData?.Locations![0]!;
-        properties.Location7 = ootData?.Locations![0]!;
-        properties.Location8 = ootData?.Locations![0]!;
-        properties.Location9 = ootData?.Locations![0]!;
+        properties.Location1 = OoTData?.Locations![0]!;
+        properties.Location2 = OoTData?.Locations![0]!;
+        properties.Location3 = OoTData?.Locations![0]!;
+        properties.Location4 = OoTData?.Locations![0]!;
+        properties.Location5 = OoTData?.Locations![0]!;
+        properties.Location6 = OoTData?.Locations![0]!;
+        properties.Location7 = OoTData?.Locations![0]!;
+        properties.Location8 = OoTData?.Locations![0]!;
+        properties.Location9 = OoTData?.Locations![0]!;
     }
 
     public static void ResolveDefaultDungeonTypes(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
-
-        properties.DungeonType1 = ootData?.Types![0]!;
-        properties.DungeonType2 = ootData?.Types![0]!;
-        properties.DungeonType3 = ootData?.Types![0]!;
-        properties.DungeonType4 = ootData?.Types![0]!;
-        properties.DungeonType5 = ootData?.Types![0]!;
-        properties.DungeonType6 = ootData?.Types![0]!;
-        properties.DungeonType7 = ootData?.Types![0]!;
-        properties.DungeonType8 = ootData?.Types![0]!;
-        properties.DungeonType9 = ootData?.Types![0]!;
-        properties.DungeonType10 = ootData?.Types![0]!;
-        properties.DungeonType11 = ootData?.Types![0]!;
-        properties.DungeonType12 = ootData?.Types![0]!;
+        properties.DungeonType1 = OoTData?.Types![0]!;
+        properties.DungeonType2 = OoTData?.Types![0]!;
+        properties.DungeonType3 = OoTData?.Types![0]!;
+        properties.DungeonType4 = OoTData?.Types![0]!;
+        properties.DungeonType5 = OoTData?.Types![0]!;
+        properties.DungeonType6 = OoTData?.Types![0]!;
+        properties.DungeonType7 = OoTData?.Types![0]!;
+        properties.DungeonType8 = OoTData?.Types![0]!;
+        properties.DungeonType9 = OoTData?.Types![0]!;
+        properties.DungeonType10 = OoTData?.Types![0]!;
+        properties.DungeonType11 = OoTData?.Types![0]!;
+        properties.DungeonType12 = OoTData?.Types![0]!;
     }
 
     public static void ResolveDefaultKeyColors(TrackerProperties properties)
@@ -62,20 +59,18 @@ public static class Resolver
 
     public static void ResolveDefaultIcons(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
+        properties.KokiriEmeraldImage = OoTData?.Progression![0].DisabledSprite!;
+        properties.GoronRubyImage = OoTData?.Progression![1].DisabledSprite!;
+        properties.ZoraSapphireImage = OoTData?.Progression![2].DisabledSprite!;
+        properties.LightMedallionImage = OoTData?.Progression![3].DisabledSprite!;
+        properties.ForestMedallionImage = OoTData?.Progression![4].DisabledSprite!;
+        properties.FireMedallionImage = OoTData?.Progression![5].DisabledSprite!;
+        properties.WaterMedallionImage = OoTData?.Progression![6].DisabledSprite!;
+        properties.ShadowMedallionImage = OoTData?.Progression![7].DisabledSprite!;
+        properties.SpiritMedallionImage = OoTData?.Progression![8].DisabledSprite!;
 
-        properties.KokiriEmeraldImage = ootData?.Progression![0].DisabledSprite!;
-        properties.GoronRubyImage = ootData?.Progression![1].DisabledSprite!;
-        properties.ZoraSapphireImage = ootData?.Progression![2].DisabledSprite!;
-        properties.LightMedallionImage = ootData?.Progression![3].DisabledSprite!;
-        properties.ForestMedallionImage = ootData?.Progression![4].DisabledSprite!;
-        properties.FireMedallionImage = ootData?.Progression![5].DisabledSprite!;
-        properties.WaterMedallionImage = ootData?.Progression![6].DisabledSprite!;
-        properties.ShadowMedallionImage = ootData?.Progression![7].DisabledSprite!;
-        properties.SpiritMedallionImage = ootData?.Progression![8].DisabledSprite!;
-
-        properties.GerudoTokenImage = ootData?.Other![0].ItemDisabled!;
-        properties.ShardImage = ootData?.Other![1].ItemDisabled!;
+        properties.GerudoTokenImage = OoTData?.Other![0].ItemDisabled!;
+        properties.ShardImage = OoTData?.Other![1].ItemDisabled!;
 
         properties.GsImage = OoTConstants.GsIcon;
         
@@ -131,82 +126,75 @@ public static class Resolver
 
     public static void ResolveSongIcons(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
-
-        properties.LullabyImage = ootData?.Songs![0].SongDisabled!;
-        properties.EponaImage = ootData?.Songs![1].SongDisabled!;
-        properties.SariaImage = ootData?.Songs![2].SongDisabled!;
-        properties.SosImage = ootData?.Songs![3].SongDisabled!;
-        properties.SunsImage = ootData?.Songs![4].SongDisabled!;
-        properties.SotImage = ootData?.Songs![5].SongDisabled!;
+        properties.LullabyImage = OoTData?.Songs![0].SongDisabled!;
+        properties.EponaImage = OoTData?.Songs![1].SongDisabled!;
+        properties.SariaImage = OoTData?.Songs![2].SongDisabled!;
+        properties.SosImage = OoTData?.Songs![3].SongDisabled!;
+        properties.SunsImage = OoTData?.Songs![4].SongDisabled!;
+        properties.SotImage = OoTData?.Songs![5].SongDisabled!;
         
-        properties.MinuetImage = ootData?.Songs![6].SongDisabled!;
-        properties.BoleroImage = ootData?.Songs![7].SongDisabled!;
-        properties.SerenadeImage = ootData?.Songs![8].SongDisabled!;
-        properties.RequiemImage = ootData?.Songs![9].SongDisabled!;
-        properties.NocturneImage = ootData?.Songs![10].SongDisabled!;
-        properties.PreludeImage = ootData?.Songs![11].SongDisabled!;
+        properties.MinuetImage = OoTData?.Songs![6].SongDisabled!;
+        properties.BoleroImage = OoTData?.Songs![7].SongDisabled!;
+        properties.SerenadeImage = OoTData?.Songs![8].SongDisabled!;
+        properties.RequiemImage = OoTData?.Songs![9].SongDisabled!;
+        properties.NocturneImage = OoTData?.Songs![10].SongDisabled!;
+        properties.PreludeImage = OoTData?.Songs![11].SongDisabled!;
     }
 
     public static void ResolveEquipIcons(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
+        properties.KokiriTunicImage = Constants.KokiriTunicImage;
+        properties.GoronTunicImage = OoTData?.Equips?.Tunics![0].DisabledSprite!;
+        properties.ZoraTunicImage = OoTData?.Equips?.Tunics![1].DisabledSprite!;
 
-        properties.KokiriTunicImage = ootData?.Equips?.Tunics![0].EnabledSprite!;
-        properties.GoronTunicImage = ootData?.Equips?.Tunics![1].DisabledSprite!;
-        properties.ZoraTunicImage = ootData?.Equips?.Tunics![2].DisabledSprite!;
+        properties.KokiriBootsImage = Constants.KokiriBootsImage;
+        properties.IronBootsImage = OoTData?.Equips?.Boots![0].DisabledSprite!;
+        properties.HoverBootsImage = OoTData?.Equips?.Boots![1].DisabledSprite!;
 
-        properties.KokiriBootsImage = ootData?.Equips?.Boots![0].EnabledSprite!;
-        properties.IronBootsImage = ootData?.Equips?.Boots![1].DisabledSprite!;
-        properties.HoverBootsImage = ootData?.Equips?.Boots![2].DisabledSprite!;
-
-        properties.KokiriSwordImage = ootData?.Equips?.Swords![0].DisabledSprite!;
-        properties.MasterSwordImage = ootData?.Equips?.Swords![1].DisabledSprite!;
-        properties.BiggoronSwordImage = ootData?.Equips?.Swords![2].DisabledSprite!;
+        properties.KokiriSwordImage = OoTData?.Equips?.Swords![0].DisabledSprite!;
+        properties.MasterSwordImage = OoTData?.Equips?.Swords![1].DisabledSprite!;
+        properties.BiggoronSwordImage = OoTData?.Equips?.Swords![2].DisabledSprite!;
         
-        properties.DekuShieldImage = ootData?.Equips?.Shields![0].DisabledSprite!;
-        properties.HylianShieldImage = ootData?.Equips?.Shields![1].DisabledSprite!;
-        properties.MirrorShieldImage = ootData?.Equips?.Shields![2].DisabledSprite!;
+        properties.DekuShieldImage = OoTData?.Equips?.Shields![0].DisabledSprite!;
+        properties.HylianShieldImage = OoTData?.Equips?.Shields![1].DisabledSprite!;
+        properties.MirrorShieldImage = OoTData?.Equips?.Shields![2].DisabledSprite!;
     }
 
     public static void ResolveGearIcons(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
-
-        properties.StrengthImage = ootData?.Upgrades![8].Icons?.GearDisabled!;
-        properties.QuiverImage = ootData?.Upgrades![13].Icons?.GearDisabled!;
-        properties.BombImage = ootData?.Upgrades![0].Icons?.GearDisabled!;
-        properties.BulletImage = ootData?.Upgrades![3].Icons?.GearDisabled!;
-        properties.ScaleImage = ootData?.Upgrades![17].Icons?.GearDisabled!;
+        properties.StrengthImage = OoTData?.Gear![6].GearDisabled!;
+        properties.QuiverImage = OoTData?.Gear![9].GearDisabled!;
+        properties.BombImage = OoTData?.Gear![0].GearDisabled!;
+        properties.BulletImage = OoTData?.Gear![3].GearDisabled!;
+        properties.ScaleImage = OoTData?.Gear![12].GearDisabled!;
     }
 
     public static void ResolveItemIcons(TrackerProperties properties)
     {
-        var ootData = Globals.InstanceData;
+        properties.SlingshotImage = OoTData?.Items![5].DisabledSprite!;
+        properties.StickImage = OoTData?.Items![16].DisabledSprite!;
+        properties.NutImage = OoTData?.Items![15].DisabledSprite!;
+        properties.BowImage = OoTData?.Items![6].DisabledSprite!;
+        properties.FireArrowImage = OoTData?.Arrows![0].DisabledSprite!;
+        properties.BombItemImage = OoTData?.Items![1].DisabledSprite!;
+        properties.DinsFireImage = OoTData?.Items![3].DisabledSprite!;
+        properties.HookshotImage = OoTData?.Items![13].DisabledSprite!;
+        properties.IceArrowImage = OoTData?.Arrows![1].DisabledSprite!;
+        properties.FaroresWindImage = OoTData?.Items![4].DisabledSprite!;
+        properties.LensImage = OoTData?.Items![7].DisabledSprite!;
+        properties.BombchuImage = OoTData?.Items![0].DisabledSprite!;
+        properties.MegatonHammerImage = OoTData?.Items![8].DisabledSprite!;
+        properties.NayrusLoveImage = OoTData?.Items![9].DisabledSprite!;
+        properties.MagicBeansImage = OoTData?.Items![10].DisabledSprite!;
+        properties.LightArrowImage = OoTData?.Arrows![2].DisabledSprite!;
+        properties.AdultTradeItemImage = OoTData?.Trades?.Adult![0].ItemDisabled!;
+        properties.ChildTradeItemImage = OoTData?.Trades?.Child![0].ItemDisabled!;
+        properties.BoomerangImage = OoTData?.Items![2].DisabledSprite!;
+        properties.OcarinaImage = OoTData?.Items![11].DisabledSprite!;
         
-        properties.SlingshotImage = ootData?.Upgrades![3].Icons?.ItemDisabled!;
-        properties.StickImage = ootData?.Upgrades![24].Icons?.ItemDisabled!;
-        properties.NutImage = ootData?.Upgrades![21].Icons?.ItemDisabled!;
-        properties.BowImage = ootData?.Upgrades![13].Icons?.ItemDisabled!;
-        properties.FireArrowImage = ootData?.Arrows![0].DisabledSprite!;
-        properties.BombItemImage = ootData?.Upgrades![0].Icons?.ItemDisabled!;
-        properties.DinsFireImage = ootData?.Items![2].DisabledSprite!;
-        properties.HookshotImage = ootData?.Upgrades![19].Icons?.ItemDisabled!;
-        properties.IceArrowImage = ootData?.Arrows![1].DisabledSprite!;
-        properties.FaroresWindImage = ootData?.Items![3].DisabledSprite!;
-        properties.LensImage = ootData?.Items![4].DisabledSprite!;
-        properties.BombchuImage = ootData?.Items![0].DisabledSprite!;
-        properties.MegatonHammerImage = ootData?.Items![5].DisabledSprite!;
-        properties.NayrusLoveImage = ootData?.Items![6].DisabledSprite!;
-        properties.MagicBeansImage = ootData?.Items![7].DisabledSprite!;
-        properties.LightArrowImage = ootData?.Arrows![2].DisabledSprite!;
-        properties.AdultTradeItemImage = ootData?.Trades?.Adult![0].ItemDisabled!;
-        properties.ChildTradeItemImage = ootData?.Trades?.Child![0].ItemDisabled!;
-        properties.BoomerangImage = ootData?.Items![1].DisabledSprite!;
-        properties.OcarinaImage = ootData?.Upgrades![6].Icons?.ItemDisabled!;
-        properties.Bottle1Image = ootData?.Bottles![0].DisabledSprite!;
-        properties.Bottle2Image = ootData?.Bottles![1].DisabledSprite!;
-        properties.Bottle3Image = ootData?.Bottles![2].DisabledSprite!;
-        properties.Bottle4Image = ootData?.Bottles![3].DisabledSprite!;
+        properties.Bottle1Image = OoTData?.Bottles![0].DisabledSprite!;
+        properties.Bottle2Image = OoTData?.Bottles![1].DisabledSprite!;
+        properties.Bottle3Image = OoTData?.Bottles![2].DisabledSprite!;
+        properties.Bottle4Image = OoTData?.Bottles![3].DisabledSprite!;
     }
 }

@@ -12,19 +12,6 @@ public partial class MainWindowViewModel : ObservableRecipient
 {
     [ObservableProperty]
     private TrackerProperties _trackerProperties = new();
-    
-    private int _ocarinaState;
-    private int _scaleState;
-    private int _strengthState;
-    private int _bombState;
-    private int _quiverState;
-    private int _bulletState;
-
-    private int _hookState;
-
-    private int _hpProg;
-
-    private int _gsTokens;
 
     private const int MaxHeartContainers = 8;
     private const int MaxHeartPieces = 36;
@@ -55,19 +42,6 @@ public partial class MainWindowViewModel : ObservableRecipient
 
     private const int MaxGtgKeysVanilla = 9;
     private const int MaxGtgKeysMq = 3;
-
-    private bool _isDekuMq;
-    private bool _isDcMq;
-    private bool _isJabuMq;
-    private bool _isForestMq;
-    private bool _isFireMq;
-    private bool _isWaterMq;
-    private bool _isShadowMq;
-    private bool _isSpiritMq;
-    private bool _isBottomMq;
-    private bool _isCavernMq;
-    private bool _isGanonMq;
-    private bool _isGtgMq;
     
     // Observable properties
     [ObservableProperty]
@@ -94,12 +68,13 @@ public partial class MainWindowViewModel : ObservableRecipient
 
     private void InitVariables()
     {
-        _ocarinaState = 0;
-        _bulletState = 0;
-        _bombState = 0;
-        _quiverState = 0;
-        _scaleState = 0;
-        _strengthState = 0;
+        TrackerProperties.OcarinaState = 0;
+        TrackerProperties.ScaleState = 0;
+        TrackerProperties.StrengthState = 0;
+        TrackerProperties.QuiverState = 0;
+        TrackerProperties.BulletState = 0;
+        TrackerProperties.BombState = 0;
+        TrackerProperties.HookState = 0;
 
         TrackerProperties.Location1Idx = 0;
         TrackerProperties.Location2Idx = 0;
@@ -123,20 +98,19 @@ public partial class MainWindowViewModel : ObservableRecipient
         TrackerProperties.Dungeon10Idx = 0;
         TrackerProperties.Dungeon11Idx = 0;
         TrackerProperties.Dungeon12Idx = 0;
+
+        TrackerProperties.HpProg = 0;
         
-        _hookState = 0;
-        _hpProg = 0;
-        
-        _isDekuMq = false;
-        _isDcMq = false;
-        _isJabuMq = false;
-        _isForestMq = false;
-        _isFireMq = false;
-        _isWaterMq = false;
-        _isShadowMq = false;
-        _isSpiritMq = false;
-        _isBottomMq = false;
-        _isCavernMq = false;
+        TrackerProperties.IsDekuMq = false;
+        TrackerProperties.IsDcMq = false;
+        TrackerProperties.IsJabuMq = false;
+        TrackerProperties.IsForestMq = false;
+        TrackerProperties.IsFireMq = false;
+        TrackerProperties.IsWaterMq = false;
+        TrackerProperties.IsShadowMq = false;
+        TrackerProperties.IsSpiritMq = false;
+        TrackerProperties.IsBottomMq = false;
+        TrackerProperties.IsCavernMq = false;
     }
     
     // ==================
@@ -219,6 +193,15 @@ public partial class MainWindowViewModel : ObservableRecipient
     {
         Logger.LogCommand(nameof(ToggleEquipCommand));
         CommandHandler.ToggleEquip(equipId, TrackerProperties);
+    }
+    
+    // ====================
+    // = UPGRADE COMMANDS =
+    // ====================
+    [RelayCommand]
+    private void UpgradeGear(string upgradeId)
+    {
+        Logger.LogInformation("Not implemented yet.");
     }
     
     // Util methods

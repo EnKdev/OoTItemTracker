@@ -29,21 +29,21 @@ public class OoTData
     public List<Bottle>? Bottles { get; set; }
 
     /// <summary>
+    /// Represents a collection of gear objects, each containing properties such as
+    /// identifiers, names, and states for both enabled and disabled configurations.
+    /// This property is used to define and manage gear-related data within the context
+    /// of Ocarina of Time game state tracking.
+    /// </summary>
+    [JsonProperty("gear")]
+    public List<Gear>? Gear { get; set; }
+    
+    /// <summary>
     /// Represents a collection of item objects, each containing attributes such as ID, name,
     /// and associated sprites for both enabled and disabled states. This property is used
     /// to manage and track items within the context of Ocarina of Time-related game data.
     /// </summary>
     [JsonProperty("items")]
     public List<Item>? Items { get; set; }
-
-    /// <summary>
-    /// Represents a collection of upgrade objects, each defining metadata such as
-    /// identifier, name, icon representation, and relational hierarchy to other upgrades.
-    /// This property is utilized for managing and tracking upgrade entities within
-    /// the context of Ocarina of Time-related data.
-    /// </summary>
-    [JsonProperty("upgrades")]
-    public List<Upgrade>? Upgrades { get; set; }
 
     /// <summary>
     /// Represents a collection of progression objects, each containing details
