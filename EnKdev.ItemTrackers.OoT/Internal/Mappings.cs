@@ -10,6 +10,50 @@ public static class Mappings
 
     private static readonly
         Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        DungeonMapMappings = new()
+        {
+            { "Dungeon_Deku", (p => p.DekuMapImage, (p, val) => p.DekuMapImage = val!) },
+            { "Dungeon_DC", (p => p.DcMapImage, (p, val) => p.DcMapImage = val!) },
+            { "Dungeon_Jabu", (p => p.JabuMapImage, (p, val) => p.JabuMapImage = val!) },
+            { "Dungeon_Forest", (p => p.ForestMapImage, (p, val) => p.ForestMapImage = val!) },
+            { "Dungeon_Fire", (p => p.FireMapImage, (p, val) => p.FireMapImage = val!) },
+            { "Dungeon_Water", (p => p.WaterMapImage, (p, val) => p.WaterMapImage = val!) },
+            { "Dungeon_Shadow", (p => p.ShadowMapImage, (p, val) => p.ShadowMapImage = val!) },
+            { "Dungeon_Spirit", (p => p.SpiritMapImage, (p, val) => p.SpiritMapImage = val!) },
+            { "Dungeon_Bottom", (p => p.BottomMapImage, (p, val) => p.BottomMapImage = val!) },
+            { "Dungeon_Cavern", (p => p.CavernMapImage, (p, val) => p.CavernMapImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        DungeonCompassMappings = new()
+        {
+            { "Dungeon_Deku", (p => p.DekuCompassImage, (p, val) => p.DekuCompassImage = val!) },
+            { "Dungeon_DC", (p => p.DcCompassImage, (p, val) => p.DcCompassImage = val!) },
+            { "Dungeon_Jabu", (p => p.JabuCompassImage, (p, val) => p.JabuCompassImage = val!) },
+            { "Dungeon_Forest", (p => p.ForestCompassImage, (p, val) => p.ForestCompassImage = val!) },
+            { "Dungeon_Fire", (p => p.FireCompassImage, (p, val) => p.FireCompassImage = val!) },
+            { "Dungeon_Water", (p => p.WaterCompassImage, (p, val) => p.WaterCompassImage = val!) },
+            { "Dungeon_Shadow", (p => p.ShadowCompassImage, (p, val) => p.ShadowCompassImage = val!) },
+            { "Dungeon_Spirit", (p => p.SpiritCompassImage, (p, val) => p.SpiritCompassImage = val!) },
+            { "Dungeon_Bottom", (p => p.BottomCompassImage, (p, val) => p.BottomCompassImage = val!) },
+            { "Dungeon_Cavern", (p => p.CavernCompassImage, (p, val) => p.CavernCompassImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        DungeonBossKeyMappings = new()
+        {
+            { "Dungeon_Forest", (p => p.ForestBkImage, (p, val) => p.ForestBkImage = val!) },
+            { "Dungeon_Fire", (p => p.FireBkImage, (p, val) => p.FireBkImage = val!) },
+            { "Dungeon_Water", (p => p.WaterBkImage, (p, val) => p.WaterBkImage = val!) },
+            { "Dungeon_Shadow", (p => p.ShadowBkImage, (p, val) => p.ShadowBkImage = val!) },
+            { "Dungeon_Spirit", (p => p.SpiritBkImage, (p, val) => p.SpiritBkImage = val!) },
+            { "Dungeon_Ganon", (p => p.GanonBkImage, (p, val) => p.GanonBkImage = val!) }
+        };
+
+    private static readonly
+        Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         ArrowMappings = new()
         {
             { "Arrow_Fire", (p => p.FireArrowImage, (p, val) => p.FireArrowImage = val!) },
@@ -28,121 +72,26 @@ public static class Mappings
         };
 
     private static readonly
-        Dictionary<string, (Func<TrackerProperties, int>? GetState, Action<TrackerProperties, int>? SetState,
-            Func<TrackerProperties, string?> GetSprite, Action<TrackerProperties, string?> SetSprite)>
+        Dictionary<string, (Func<TrackerProperties, string?> GetSprite, Action<TrackerProperties, string?> SetSprite)>
         ItemMappings = new()
         {
-            { "Item_Bombchu", (null, null, p => p.BombchuImage, (p, val) => p.BombchuImage = val!) },
-            { "Item_Boomerang", (null, null, p => p.BoomerangImage, (p, val) => p.BoomerangImage = val!) },
-            { "Item_DinsFire", (null, null, p => p.DinsFireImage, (p, val) => p.DinsFireImage = val!) },
-            { "Item_FaroresWind", (null, null, p => p.FaroresWindImage, (p, val) => p.FaroresWindImage = val!) },
-            { "Item_Lens", (null, null, p => p.LensImage, (p, val) => p.LensImage = val!) },
-            { "Item_Hammer", (null, null, p => p.MegatonHammerImage, (p, val) => p.MegatonHammerImage = val!) },
-            { "Item_NayrusLove", (null, null, p => p.NayrusLoveImage, (p, val) => p.NayrusLoveImage = val!) },
-            { "Item_MagicBeans", (null, null, p => p.MagicBeansImage, (p, val) => p.MagicBeansImage = val!) },
-            {
-                "Item_FairyOcarina",
-                (p => p.OcarinaState, (p, state) => p.OcarinaState = state, p => p.OcarinaImage,
-                    (p, val) => p.OcarinaImage = val!)
-            },
-            {
-                "Item_OcarinaOfTime",
-                (p => p.OcarinaState, (p, state) => p.OcarinaState = state, p => p.OcarinaImage,
-                    (p, val) => p.OcarinaImage = val!)
-            },
-            {
-                "Item_Hookshot",
-                (p => p.HookState, (p, state) => p.HookState = state, p => p.HookshotImage,
-                    (p, val) => p.HookshotImage = val!)
-            },
-            {
-                "Item_Longshot",
-                (p => p.HookState, (p, state) => p.HookState = state, p => p.HookshotImage,
-                    (p, val) => p.HookshotImage = val!)
-            },
-            { "Item_DekuNuts", (null, null, p => p.NutImage, (p, val) => p.NutImage = val!) },
-            { "Item_DekuStick", (null, null, p => p.StickImage, (p, val) => p.StickImage = val!) },
-            { "Item_Bomb", (null, null, p => p.BombItemImage, (p, val) => p.BombItemImage = val!) },
-            { "Item_Slingshot", (null, null, p => p.SlingshotImage, (p, val) => p.SlingshotImage = val!) },
-            { "Item_Bow", (null, null, p => p.BowImage, (p, val) => p.BowImage = val!) }
-        };
-
-    private static readonly
-        Dictionary<string, (Func<TrackerProperties, int> GetState, Action<TrackerProperties, int> SetState,
-            Func<TrackerProperties, string?> GetGearSprite, Action<TrackerProperties, string?> SetGearSprite,
-            string? AssociatedItem)>
-        GearMappings = new()
-        {
-            {
-                "Gear_BombBag", (p => p.BombState, (p, state) => p.BombState = state,
-                    p => p.BombImage, (p, val) => p.BombImage = val!,
-                    "Item_Bomb")
-            },
-            {
-                "Gear_BigBombBag", (p => p.BombState, (p, state) => p.BombState = state,
-                    p => p.BombImage, (p, val) => p.BombImage = val!,
-                    null)
-            },
-            {
-                "Gear_BiggestBombBag", (p => p.BombState, (p, state) => p.BombState = state,
-                    p => p.BombImage, (p, val) => p.BombImage = val!,
-                    null)
-            },
-            {
-                "Gear_BulletBag30", (p => p.BulletState, (p, state) => p.BulletState = state,
-                    p => p.BulletImage, (p, val) => p.BulletImage = val!,
-                    "Item_Slingshot")
-            },
-            {
-                "Gear_BulletBag40", (p => p.BulletState, (p, state) => p.BulletState = state,
-                    p => p.BulletImage, (p, val) => p.BulletImage = val!,
-                    null)
-            },
-            {
-                "Gear_BulletBag50", (p => p.BulletState, (p, state) => p.BulletState = state,
-                    p => p.BulletImage, (p, val) => p.BulletImage = val!,
-                    null)
-            },
-            {
-                "Gear_Bracelet", (p => p.StrengthState, (p, state) => p.StrengthState = state,
-                    p => p.StrengthImage, (p, val) => p.StrengthImage = val!,
-                    null)
-            },
-            {
-                "Gear_SilverGauntlets", (p => p.StrengthState, (p, state) => p.StrengthState = state,
-                    p => p.StrengthImage, (p, val) => p.StrengthImage = val!,
-                    null)
-            },
-            {
-                "Gear_GoldenGauntlets", (p => p.StrengthState, (p, state) => p.StrengthState = state,
-                    p => p.StrengthImage, (p, val) => p.StrengthImage = val!,
-                    null)
-            },
-            {
-                "Gear_Quiver", (p => p.QuiverState, (p, state) => p.QuiverState = state,
-                    p => p.QuiverImage, (p, val) => p.QuiverImage = val!,
-                    "Item_Bow")
-            },
-            {
-                "Gear_BigQuiver", (p => p.QuiverState, (p, state) => p.QuiverState = state,
-                    p => p.QuiverImage, (p, val) => p.QuiverImage = val!,
-                    null)
-            },
-            {
-                "Gear_BiggestQuiver", (p => p.QuiverState, (p, state) => p.QuiverState = state,
-                    p => p.QuiverImage, (p, val) => p.QuiverImage = val!,
-                    null)
-            },
-            {
-                "Gear_SilverScale", (p => p.ScaleState, (p, state) => p.ScaleState = state,
-                    p => p.ScaleImage, (p, val) => p.ScaleImage = val!,
-                    null)
-            },
-            {
-                "Gear_GoldenScale", (p => p.ScaleState, (p, state) => p.ScaleState = state,
-                    p => p.ScaleImage, (p, val) => p.ScaleImage = val!,
-                    null)
-            }
+            { "Item_Bombchu", (p => p.BombchuImage, (p, val) => p.BombchuImage = val!) },
+            { "Item_Boomerang", (p => p.BoomerangImage, (p, val) => p.BoomerangImage = val!) },
+            { "Item_DinsFire", (p => p.DinsFireImage, (p, val) => p.DinsFireImage = val!) },
+            { "Item_FaroresWind", (p => p.FaroresWindImage, (p, val) => p.FaroresWindImage = val!) },
+            { "Item_Lens", (p => p.LensImage, (p, val) => p.LensImage = val!) },
+            { "Item_Hammer", (p => p.MegatonHammerImage, (p, val) => p.MegatonHammerImage = val!) },
+            { "Item_NayrusLove", (p => p.NayrusLoveImage, (p, val) => p.NayrusLoveImage = val!) },
+            { "Item_MagicBeans", (p => p.MagicBeansImage, (p, val) => p.MagicBeansImage = val!) },
+            { "Item_FairyOcarina", (p => p.OcarinaImage, (p, val) => p.OcarinaImage = val!) },
+            { "Item_OcarinaOfTime", (p => p.OcarinaImage, (p, val) => p.OcarinaImage = val!) },
+            { "Item_Hookshot", (p => p.HookshotImage, (p, val) => p.HookshotImage = val!) },
+            { "Item_Longshot", (p => p.HookshotImage, (p, val) => p.HookshotImage = val!) },
+            { "Item_DekuNuts", (p => p.NutImage, (p, val) => p.NutImage = val!) },
+            { "Item_DekuStick", (p => p.StickImage, (p, val) => p.StickImage = val!) },
+            { "Item_Bomb", (p => p.BombItemImage, (p, val) => p.BombItemImage = val!) },
+            { "Item_Slingshot", (p => p.SlingshotImage, (p, val) => p.SlingshotImage = val!) },
+            { "Item_Bow", (p => p.BowImage, (p, val) => p.BowImage = val!) }
         };
 
     private static readonly
@@ -339,6 +288,159 @@ public static class Mappings
             }
         };
 
+    private static readonly Dictionary<string,
+            (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
+            Func<TrackerProperties, string?>, Action<TrackerProperties, string?>,
+            Func<TrackerProperties, bool>, Action<TrackerProperties, bool>,
+            Func<int, string?>, int)>
+        DungeonStateMappings = new()
+        {
+            {
+                "Dungeon_Deku", (p => p.Dungeon1Idx, (p, idx) => p.Dungeon1Idx = idx,
+                    p => p.DungeonType1, (p, val) => p.DungeonType1 = val!,
+                    p => p.IsDekuMq, (p, val) => p.IsDekuMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_DC", (p => p.Dungeon2Idx, (p, idx) => p.Dungeon2Idx = idx,
+                    p => p.DungeonType2, (p, val) => p.DungeonType2 = val!,
+                    p => p.IsDcMq, (p, val) => p.IsDcMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Jabu", (p => p.Dungeon3Idx, (p, idx) => p.Dungeon3Idx = idx,
+                    p => p.DungeonType3, (p, val) => p.DungeonType3 = val!,
+                    p => p.IsJabuMq, (p, val) => p.IsJabuMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Forest", (p => p.Dungeon4Idx, (p, idx) => p.Dungeon4Idx = idx,
+                    p => p.DungeonType4, (p, val) => p.DungeonType4 = val!,
+                    p => p.IsForestMq, (p, val) => p.IsForestMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Fire", (p => p.Dungeon5Idx, (p, idx) => p.Dungeon5Idx = idx,
+                    p => p.DungeonType5, (p, val) => p.DungeonType5 = val!,
+                    p => p.IsFireMq, (p, val) => p.IsFireMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Water", (p => p.Dungeon6Idx, (p, idx) => p.Dungeon6Idx = idx,
+                    p => p.DungeonType6, (p, val) => p.DungeonType6 = val!,
+                    p => p.IsWaterMq, (p, val) => p.IsWaterMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Shadow", (p => p.Dungeon7Idx, (p, idx) => p.Dungeon7Idx = idx,
+                    p => p.DungeonType7, (p, val) => p.DungeonType7 = val!,
+                    p => p.IsShadowMq, (p, val) => p.IsShadowMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Spirit", (p => p.Dungeon8Idx, (p, idx) => p.Dungeon8Idx = idx,
+                    p => p.DungeonType8, (p, val) => p.DungeonType8 = val!,
+                    p => p.IsSpiritMq, (p, val) => p.IsSpiritMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Bottom", (p => p.Dungeon9Idx, (p, idx) => p.Dungeon9Idx = idx,
+                    p => p.DungeonType9, (p, val) => p.DungeonType9 = val!,
+                    p => p.IsBottomMq, (p, val) => p.IsBottomMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Cavern", (p => p.Dungeon10Idx, (p, idx) => p.Dungeon10Idx = idx,
+                    p => p.DungeonType10, (p, val) => p.DungeonType10 = val!,
+                    p => p.IsCavernMq, (p, val) => p.IsCavernMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Training", (p => p.Dungeon11Idx, (p, idx) => p.Dungeon11Idx = idx,
+                    p => p.DungeonType11, (p, val) => p.DungeonType11 = val!,
+                    p => p.IsGtgMq, (p, val) => p.IsGtgMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            },
+            {
+                "Dungeon_Ganon", (p => p.Dungeon12Idx, (p, idx) => p.Dungeon12Idx = idx,
+                    p => p.DungeonType12, (p, val) => p.DungeonType12 = val!,
+                    p => p.IsGanonMq, (p, val) => p.IsGanonMq = val,
+                    idx => idx switch
+                    {
+                        0 => OoTData?.Types![0],
+                        1 => OoTData?.Types![1],
+                        2 => OoTData?.Types![2],
+                        _ => null
+                    }, 2)
+            }
+        };
+
     private static readonly
         Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         EquipMappings = new()
@@ -410,49 +512,186 @@ public static class Mappings
             { "Other_Shard", (p => p.ShardImage, (p, val) => p.ShardImage = val!) }
         };
     
-    // TODO: Figure Vanilla/MQ Dungeon Mappings out
-    
     // ----
-    
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings related to dungeon map images. Each key represents
+    /// a dungeon identifier, and the value is a tuple containing a getter and setter.
+    /// The getter retrieves the current map image for the specified dungeon from a TrackerProperties object,
+    /// and the setter updates the map image for the same dungeon within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers corresponding to specific dungeons,
+    /// and the values are tuples. Each tuple consists of a function to get the string value
+    /// of the dungeon map image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetDungeonMapMappings() => DungeonMapMappings;
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings related to dungeon compass images. Each key represents
+    /// a dungeon identifier, and the value is a tuple containing a getter and setter.
+    /// The getter retrieves the current compass image for the specified dungeon from a TrackerProperties object,
+    /// and the setter updates the compass image for the same dungeon within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers corresponding to specific dungeons,
+    /// and the values are tuples. Each tuple consists of a function to get the string value
+    /// of the dungeon compass image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetDungeonCompassMappings() => DungeonCompassMappings;
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings related to dungeon boss key images. Each key represents
+    /// a specific dungeon identifier, and the value is a tuple containing a getter and setter.
+    /// The getter retrieves the current boss key image for the specified dungeon from a TrackerProperties object,
+    /// and the setter updates the boss key image for the same dungeon within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers corresponding to specific dungeons,
+    /// and the values are tuples. Each tuple consists of a function to get the string value
+    /// of the dungeon boss key image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
+    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
+        GetDungeonBossKeyMappings() => DungeonBossKeyMappings;
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings for arrow-related items, where each key corresponds
+    /// to an identifier, and the value represents a tuple containing a getter and setter.
+    /// The getter retrieves the value associated with a specific arrow item image from a TrackerProperties object,
+    /// and the setter updates the value for the same property within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers representing specific arrow items,
+    /// and the values are tuples. Each tuple consists of a function to get the string value of
+    /// the arrow item image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetArrowMappings() => ArrowMappings;
 
+    /// <summary>
+    /// Retrieves a dictionary of mappings for bottle-related items, where each key corresponds
+    /// to an identifier, and the value represents a tuple containing a getter and setter.
+    /// The getter retrieves the value associated with a specific bottle item image from a TrackerProperties object,
+    /// and the setter updates the value for the same property within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers representing specific bottle items,
+    /// and the values are tuples. Each tuple consists of a function to get the string value of
+    /// the bottle item image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetBottleMappings() => BottleMappings;
-    
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings for item-related properties. Each entry in the dictionary
+    /// corresponds to an item identifier, providing its associated state and sprite manipulation functions.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are strings representing item identifiers, and the values are
+    /// tuples containing functions to get or set the item's state and sprite within a TrackerProperties object.
+    /// </returns>
     public static
-        Dictionary<string, (Func<TrackerProperties, int>? GetState, Action<TrackerProperties, int>? SetState,
-            Func<TrackerProperties, string?> GetSprite, Action<TrackerProperties, string?> SetSprite)>
+        Dictionary<string, (Func<TrackerProperties, string?> GetSprite, Action<TrackerProperties, string?> SetSprite)>
         GetItemMappings() => ItemMappings;
-    
-    public static 
-        Dictionary<string, (Func<TrackerProperties, int> GetState, Action<TrackerProperties, int> SetState,
-            Func<TrackerProperties, string?> GetGearSprite, Action<TrackerProperties, string?> SetGearSprite,
-            string? AssociatedItem)>
-        GetGearMappings() => GearMappings;
-    
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings for quest-related items, where each key corresponds
+    /// to a progression identifier (e.g., medallions or spiritual stones), and the value is
+    /// a tuple containing a getter and a setter.
+    /// The getter retrieves the string representation of the item's image from a TrackerProperties object,
+    /// and the setter updates the string value for that property within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers representing specific quest items,
+    /// and the values are tuples. Each tuple consists of a function to get the string value of
+    /// the quest item image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetQuestMappings() => QuestMappings;
-    
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings for location-related items, where each key corresponds
+    /// to an identifier, and the value represents a tuple containing multiple functions and a default threshold value.
+    /// The functions include getters and setters for integer and string representations of the location's properties,
+    /// as well as a conversion function to transform an integer value into its string representation.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers representing specific locations,
+    /// and the values are tuples consisting of:
+    /// 1. A function to get an integer value associated with the location's property.
+    /// 2. A function to set an integer value for the location's property.
+    /// 3. A function to get a string value representing the location's property.
+    /// 4. A function to set a string value for the location's property.
+    /// 5. A function to convert an integer into a string representation.
+    /// 6. An integer representing the default threshold value for the property.
+    /// </returns>
     public static Dictionary<string,
-        (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
+            (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
         Func<TrackerProperties, string?>, Action<TrackerProperties, string?>,
         Func<int, string?>, int)>
         GetLocationMappings() => LocationMappings;
-        
-    
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings related to dungeon states. Each key represents
+    /// a dungeon identifier, and the values are a set of functions and integers that interact
+    /// with dungeon state data within a TrackerProperties object. These include functions
+    /// to get and set integer and string state values, as well as a function to map integer
+    /// states to corresponding string representations, and a default integer state value.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers corresponding to specific dungeons.
+    /// Each value is a tuple consisting of functions to get and set both integer and string
+    /// state values in a TrackerProperties object, a function to convert integer states to
+    /// string representations, and a default integer state value.
+    /// </returns>
+    public static Dictionary<string,
+            (Func<TrackerProperties, int>, Action<TrackerProperties, int>,
+            Func<TrackerProperties, string?>, Action<TrackerProperties, string?>,
+            Func<TrackerProperties, bool>, Action<TrackerProperties, bool>,
+            Func<int, string?>, int)>
+        GetDungeonStateMappings() => DungeonStateMappings;
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings for equipment-related items, where each key corresponds
+    /// to an identifier, and the value represents a tuple containing a getter and setter.
+    /// The getter retrieves the image value associated with a specific equipment item from a TrackerProperties object,
+    /// and the setter updates the image value for the same property within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers representing specific equipment items,
+    /// and the values are tuples. Each tuple consists of a function to get the string value of
+    /// the equipment item image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetEquipMappings() => EquipMappings;
-    
+
+    /// <summary>
+    /// Retrieves a dictionary of mappings for song-related items, where each key represents
+    /// a song identifier, and the value is a tuple containing a getter and setter function.
+    /// The getter retrieves the value associated with the specific song item image from a TrackerProperties object,
+    /// and the setter updates the value for the same property within the object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where the keys are string identifiers corresponding to specific song items,
+    /// and the values are tuples. Each tuple consists of a function to get the string value
+    /// of the song item image and a function to set the string value in a TrackerProperties object.
+    /// </returns>
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetSongMappings() => SongMappings;
-    
-    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        GetChildTradeMappings() => ChildTradeMappings;
 
-    public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
-        GetAdultTradeMappings() => AdultTradeMappings;
-    
+    /// <summary>
+    /// Retrieves a dictionary of mappings used for "Other" trackers, where each key corresponds
+    /// to an identifier and the value represents a tuple containing a getter and setter.
+    /// The getter retrieves the value from the specified TrackerProperties object, while
+    /// the setter updates the value within the same object.
+    /// </summary>
+    /// <returns>
+    /// A dictionary where keys are string identifiers and values are tuples. Each tuple
+    /// consists of a function to get a string value and a function to set a string value
+    /// in a TrackerProperties object.
+    /// </returns>
     public static Dictionary<string, (Func<TrackerProperties, string?> Get, Action<TrackerProperties, string?> Set)>
         GetOtherMappings() => OtherMappings;
 }

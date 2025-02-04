@@ -39,14 +39,14 @@ public static class Resolver
 
     public static void ResolveDefaultKeyColors(TrackerProperties properties)
     {
-        properties.ForestKeyColor = Constants.NoKeyColor;
-        properties.FireKeyColor = Constants.NoKeyColor;
-        properties.WaterKeyColor = Constants.NoKeyColor;
-        properties.ShadowKeyColor = Constants.NoKeyColor;
-        properties.SpiritKeyColor = Constants.NoKeyColor;
-        properties.BottomKeyColor = Constants.NoKeyColor;
-        properties.GanonKeyColor = Constants.NoKeyColor;
-        properties.GtgKeyColor = Constants.NoKeyColor;
+        properties.ForestKeyColor = AppConstants.NoKeyColor;
+        properties.FireKeyColor = AppConstants.NoKeyColor;
+        properties.WaterKeyColor = AppConstants.NoKeyColor;
+        properties.ShadowKeyColor = AppConstants.NoKeyColor;
+        properties.SpiritKeyColor = AppConstants.NoKeyColor;
+        properties.BottomKeyColor = AppConstants.NoKeyColor;
+        properties.GanonKeyColor = AppConstants.NoKeyColor;
+        properties.GtgKeyColor = AppConstants.NoKeyColor;
     }
 
     public static void ResolveBackgrounds(TrackerProperties properties)
@@ -143,11 +143,11 @@ public static class Resolver
 
     public static void ResolveEquipIcons(TrackerProperties properties)
     {
-        properties.KokiriTunicImage = Constants.KokiriTunicImage;
+        properties.KokiriTunicImage = AppConstants.KokiriTunicImage;
         properties.GoronTunicImage = OoTData?.Equips?.Tunics![0].DisabledSprite!;
         properties.ZoraTunicImage = OoTData?.Equips?.Tunics![1].DisabledSprite!;
 
-        properties.KokiriBootsImage = Constants.KokiriBootsImage;
+        properties.KokiriBootsImage = AppConstants.KokiriBootsImage;
         properties.IronBootsImage = OoTData?.Equips?.Boots![0].DisabledSprite!;
         properties.HoverBootsImage = OoTData?.Equips?.Boots![1].DisabledSprite!;
 

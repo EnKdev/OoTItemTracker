@@ -73,24 +73,6 @@ public class OoTData
     public List<Song>? Songs { get; set; }
 
     /// <summary>
-    /// Represents a collection of vanilla dungeon objects, each containing metadata such
-    /// as unique identifier, name, maximum number of keys, and boss key state. This property
-    /// is designed to facilitate tracking and management of dungeons within the Ocarina of Time
-    /// game's internal JSON structure.
-    /// </summary>
-    [JsonProperty("vanillaDungeons")]
-    public List<VanillaDungeon>? VanillaDungeons { get; set; }
-
-    /// <summary>
-    /// Represents a collection of MQ (Master Quest) dungeon data, where each entry provides details
-    /// about a specific MQ dungeon, including its identifier, name, maximum required keys, and whether
-    /// it contains a boss key. This property is utilized to manage Master Quest dungeon-related state
-    /// for Ocarina of Time-specific data handling.
-    /// </summary>
-    [JsonProperty("mqDungeons")]
-    public List<MqDungeon>? MqDungeons { get; set; }
-
-    /// <summary>
     /// Represents a collection of location identifiers within the context of Ocarina of Time.
     /// These locations may correspond to in-game areas, events, or points of interest
     /// relevant for tracking progression or other gameplay elements.

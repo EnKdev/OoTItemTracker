@@ -1,22 +1,9 @@
-# EnKdevs Ocarina of Time/Majora's Mask Trackers
-Two Trackers written in C# and XAML.
+# EnKdevs Item Trackers
+A collection of item trackers for various game randomizers.
 
-Current Version (OoT): <b>3.0.0-build.5+1ab6df9</b><br/>
-Current Version (MM): <b>Not started yet</b>
-
-Next Version (OoT): <b>3.0.0-build.6+1bab039</b><br/>
-Next Version (MM): <b>1.0.0-build.1+16f4f58</b>
-<br/>
-
-### On plan for 3.0.0-build.6+1bab039 (OoT):
-- Getting the app back up to speed so new features can be fully implemented.
-
-### On plan for 1.0.0-build.1+19c52c9 (MM):
-- Designing the UI screens (Masks, Dungeons, Items, Quest)
-- Implementing base functionality
+List of supported games: [Supported Games](https://github.com/EnKdev/EnKdevs-Item-Trackers/blob/develop/SUPPORTED%20GAMES.md)<br/>
 
 ---
-
 ### [Changelogs](https://github.com/EnKdev/EnKdevs-Item-Trackers/blob/main/CHANGELOGS.md) & [Latest Release](https://github.com/EnKdev/EnKdevs-Item-Trackers/releases)
 
 ---
@@ -33,7 +20,7 @@ Tools Used:
 
 ### Requirements:
 
-- [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [.NET 9 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 
 ---
 

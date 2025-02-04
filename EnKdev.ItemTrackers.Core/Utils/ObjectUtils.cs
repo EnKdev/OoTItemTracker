@@ -47,16 +47,6 @@ public static class ObjectUtils
         => data?.Items?.FirstOrDefault(x => x.Id == id);
 
     /// <summary>
-    /// Retrieves an object of type <see cref="MqDungeon"/> by its unique identifier
-    /// from the provided <see cref="OoTData"/> collection.
-    /// </summary>
-    /// <param name="id">The unique identifier of the dungeon to retrieve.</param>
-    /// <param name="data">The <see cref="OoTData"/> collection to search within.</param>
-    /// <returns>The matching <see cref="MqDungeon"/> object if found; otherwise, null.</returns>
-    public static MqDungeon? GetDungeonObjectById(string id, OoTData? data)
-        => data?.MqDungeons?.FirstOrDefault(x => x.Id == id);
-
-    /// <summary>
     /// Retrieves a <see cref="Progression"/> object by its unique identifier from the provided <see cref="OoTData"/>.
     /// </summary>
     /// <param name="id">The unique identifier of the progression object to retrieve.</param>
@@ -82,15 +72,6 @@ public static class ObjectUtils
     /// <returns>The matching <see cref="Gear"/> object if found; otherwise, null.</returns>
     public static Gear? GetGearObjectById(string id, OoTData? data)
         => data?.Gear?.FirstOrDefault(x => x.Id == id);
-
-    /// <summary>
-    /// Retrieves a <see cref="VanillaDungeon"/> object by its unique identifier from the provided <see cref="OoTData"/>.
-    /// </summary>
-    /// <param name="id">The unique identifier of the dungeon to retrieve.</param>
-    /// <param name="data">The <see cref="OoTData"/> collection to search within.</param>
-    /// <returns>The matching <see cref="VanillaDungeon"/> object if found; otherwise, null.</returns>
-    public static VanillaDungeon? GetVanillaDungeonObjectById(string id, OoTData? data)
-        => data?.VanillaDungeons?.FirstOrDefault(x => x.Id == id);
 
     /// <summary>
     /// Retrieves an object of type <see cref="Sword"/> by its unique identifier from the provided <see cref="OoTData"/>.

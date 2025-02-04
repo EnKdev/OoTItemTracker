@@ -186,6 +186,12 @@ public partial class TrackerProperties : ObservableRecipient
     private int _hookState;
 
     [ObservableProperty]
+    private int _childTradeState;
+
+    [ObservableProperty]
+    private int _adultTradeState;
+
+    [ObservableProperty]
     private int _hpProg;
 
     [ObservableProperty]
@@ -225,401 +231,359 @@ public partial class TrackerProperties : ObservableRecipient
     private bool _isGtgMq;
 
     [ObservableProperty]
-    private string _heartPieceProgression;
+    private string? _heartPieceProgression;
     
     [ObservableProperty] 
-    private SolidColorBrush _forestKeyColor;
+    private SolidColorBrush? _forestKeyColor;
 
     [ObservableProperty] 
-    private SolidColorBrush _fireKeyColor;
+    private SolidColorBrush? _fireKeyColor;
 
     [ObservableProperty] 
-    private SolidColorBrush _waterKeyColor;
+    private SolidColorBrush? _waterKeyColor;
 
     [ObservableProperty] 
-    private SolidColorBrush _shadowKeyColor;
+    private SolidColorBrush? _shadowKeyColor;
 
     [ObservableProperty]
-    private SolidColorBrush _spiritKeyColor;
+    private SolidColorBrush? _spiritKeyColor;
 
     [ObservableProperty]
-    private SolidColorBrush _bottomKeyColor;
+    private SolidColorBrush? _bottomKeyColor;
 
     [ObservableProperty]
-    private SolidColorBrush _ganonKeyColor;
+    private SolidColorBrush? _ganonKeyColor;
 
     [ObservableProperty]
-    private SolidColorBrush _gtgKeyColor;
+    private SolidColorBrush? _gtgKeyColor;
     
     [ObservableProperty]
-    private string _kokiriEmeraldImage;
+    private string? _kokiriEmeraldImage;
 
     [ObservableProperty]
-    private string _goronRubyImage;
+    private string? _goronRubyImage;
 
     [ObservableProperty]
-    private string _zoraSapphireImage;
+    private string? _zoraSapphireImage;
 
     [ObservableProperty] 
-    private string _lightMedallionImage;
+    private string? _lightMedallionImage;
 
     [ObservableProperty]
-    private string _forestMedallionImage;
+    private string? _forestMedallionImage;
 
     [ObservableProperty]
-    private string _fireMedallionImage;
+    private string? _fireMedallionImage;
 
     [ObservableProperty]
-    private string _waterMedallionImage;
+    private string? _waterMedallionImage;
 
     [ObservableProperty]
-    private string _shadowMedallionImage;
+    private string? _shadowMedallionImage;
 
     [ObservableProperty]
-    private string _spiritMedallionImage;
+    private string? _spiritMedallionImage;
     
     [ObservableProperty]
-    private string _kokiriSwordImage;
+    private string? _kokiriSwordImage;
 
     [ObservableProperty]
-    private string _masterSwordImage;
+    private string? _masterSwordImage;
 
     [ObservableProperty]
-    private string _biggoronSwordImage;
+    private string? _biggoronSwordImage;
 
     [ObservableProperty]
-    private string _dekuShieldImage;
+    private string? _dekuShieldImage;
 
     [ObservableProperty]
-    private string _hylianShieldImage;
+    private string? _hylianShieldImage;
 
     [ObservableProperty]
-    private string _mirrorShieldImage;
+    private string? _mirrorShieldImage;
 
     [ObservableProperty]
-    private string _kokiriTunicImage;
+    private string? _kokiriTunicImage;
 
     [ObservableProperty]
-    private string _goronTunicImage;
+    private string? _goronTunicImage;
 
     [ObservableProperty]
-    private string _zoraTunicImage;
+    private string? _zoraTunicImage;
 
     [ObservableProperty]
-    private string _kokiriBootsImage;
+    private string? _kokiriBootsImage;
 
     [ObservableProperty]
-    private string _ironBootsImage;
+    private string? _ironBootsImage;
 
     [ObservableProperty]
-    private string _hoverBootsImage;
+    private string? _hoverBootsImage;
     
     [ObservableProperty]
-    private string _ocarinaImage;
+    private string? _ocarinaImage;
 
     [ObservableProperty]
-    private string _scaleImage;
+    private string? _scaleImage;
 
     [ObservableProperty]
-    private string _strengthImage;
+    private string? _strengthImage;
 
     [ObservableProperty]
-    private string _bombImage;
+    private string? _bombImage;
 
     [ObservableProperty]
-    private string _quiverImage;
+    private string? _quiverImage;
 
     [ObservableProperty]
-    private string _bulletImage;
+    private string? _bulletImage;
     
     [ObservableProperty]
-    private string _gsImage;
+    private string? _gsImage;
 
     [ObservableProperty] 
-    private string _gerudoTokenImage;
+    private string? _gerudoTokenImage;
 
     [ObservableProperty] 
-    private string _shardImage;
+    private string? _shardImage;
 
     [ObservableProperty]
-    private string _heartPiece;
+    private string? _heartPiece;
 
     [ObservableProperty]
-    private string _heartContainer;
+    private string? _heartContainer;
 
     [ObservableProperty]
-    private string _hpIcon;
+    private string? _hpIcon;
     
     [ObservableProperty]
-    private string _lullabyImage;
+    private string? _lullabyImage;
 
     [ObservableProperty]
-    private string _eponaImage;
+    private string? _eponaImage;
 
     [ObservableProperty]
-    private string _sariaImage;
+    private string? _sariaImage;
 
     [ObservableProperty]
-    private string _sosImage;
+    private string? _sosImage;
 
     [ObservableProperty]
-    private string _sunsImage;
+    private string? _sunsImage;
 
     [ObservableProperty]
-    private string _sotImage;
+    private string? _sotImage;
 
     [ObservableProperty]
-    private string _minuetImage;
+    private string? _minuetImage;
 
     [ObservableProperty]
-    private string _boleroImage;
+    private string? _boleroImage;
 
     [ObservableProperty]
-    private string _serenadeImage;
+    private string? _serenadeImage;
 
     [ObservableProperty]
-    private string _requiemImage;
+    private string? _requiemImage;
 
     [ObservableProperty]
-    private string _nocturneImage;
+    private string? _nocturneImage;
 
     [ObservableProperty]
-    private string _preludeImage;
+    private string? _preludeImage;
     
     [ObservableProperty]
-    private string _bottle1Image;
+    private string? _bottle1Image;
 
     [ObservableProperty]
-    private string _bottle2Image;
+    private string? _bottle2Image;
 
     [ObservableProperty]
-    private string _bottle3Image;
+    private string? _bottle3Image;
 
     [ObservableProperty]
-    private string _bottle4Image;
+    private string? _bottle4Image;
 
     [ObservableProperty]
-    private string _weirdEggIcon;
+    private string? _weirdEggIcon;
 
     [ObservableProperty]
-    private string _cuccoIcon;
+    private string? _cuccoIcon;
 
     [ObservableProperty]
-    private string _letterIcon;
-
-    [ObservableProperty]
-    private string _skullMaskIcon;
-
-    [ObservableProperty]
-    private string _maskOfTruthIcon;
-    
-    [ObservableProperty]
-    private string _pocketEggImage;
-
-    [ObservableProperty]
-    private string _pocketCuccoImage;
-
-    [ObservableProperty]
-    private string _cojiroImage;
-
-    [ObservableProperty]
-    private string _oddMushroomImage;
-
-    [ObservableProperty]
-    private string _oddPoulticeImage;
-
-    [ObservableProperty]
-    private string _poachersSawImage;
-
-    [ObservableProperty]
-    private string _giantsKnifeImage;
-
-    [ObservableProperty]
-    private string _brokenGoronsSwordImage;
-
-    [ObservableProperty]
-    private string _prescriptionImage;
-
-    [ObservableProperty]
-    private string _eyeballFrogImage;
-
-    [ObservableProperty]
-    private string _eyeDropsImage;
-
-    [ObservableProperty]
-    private string _claimCheckImage;
+    private string? _letterIcon;
     
     [ObservableProperty] 
-    private string _stickImage;
+    private string? _stickImage;
 
     [ObservableProperty] 
-    private string _nutImage;
+    private string? _nutImage;
 
     [ObservableProperty]
-    private string _slingshotImage;
+    private string? _slingshotImage;
 
     [ObservableProperty]
-    private string _dinsFireImage;
+    private string? _dinsFireImage;
 
     [ObservableProperty]
-    private string _bombItemImage;
+    private string? _bombItemImage;
 
     [ObservableProperty]
-    private string _bombchuImage;
+    private string? _bombchuImage;
 
     [ObservableProperty]
-    private string _childTradeItemImage;
+    private string? _childTradeItemImage;
 
     [ObservableProperty]
-    private string _faroresWindImage;
+    private string? _faroresWindImage;
 
     [ObservableProperty]
-    private string _boomerangImage;
+    private string? _boomerangImage;
 
     [ObservableProperty]
-    private string _hookshotImage;
+    private string? _hookshotImage;
 
     [ObservableProperty]
-    private string _adultTradeItemImage;
+    private string? _adultTradeItemImage;
 
     [ObservableProperty]
-    private string _nayrusLoveImage;
+    private string? _nayrusLoveImage;
 
     [ObservableProperty]
-    private string _lensImage;
+    private string? _lensImage;
 
     [ObservableProperty]
-    private string _megatonHammerImage;
+    private string? _megatonHammerImage;
 
     [ObservableProperty]
-    private string _bowImage;
+    private string? _bowImage;
 
     [ObservableProperty]
-    private string _magicBeansImage;
+    private string? _magicBeansImage;
 
     [ObservableProperty]
-    private string _fireArrowImage;
+    private string? _fireArrowImage;
 
     [ObservableProperty]
-    private string _iceArrowImage;
+    private string? _iceArrowImage;
 
     [ObservableProperty]
-    private string _lightArrowImage;
+    private string? _lightArrowImage;
     
     [ObservableProperty]
-    private string _dekuMapImage;
+    private string? _dekuMapImage;
 
     [ObservableProperty]
-    private string _dekuCompassImage;
+    private string? _dekuCompassImage;
 
     [ObservableProperty]
-    private string _dcMapImage;
+    private string? _dcMapImage;
 
     [ObservableProperty]
-    private string _dcCompassImage;
+    private string? _dcCompassImage;
 
     [ObservableProperty]
-    private string _jabuMapImage;
+    private string? _jabuMapImage;
 
     [ObservableProperty]
-    private string _jabuCompassImage;
+    private string? _jabuCompassImage;
 
     [ObservableProperty]
-    private string _forestMapImage;
+    private string? _forestMapImage;
 
     [ObservableProperty]
-    private string _forestCompassImage;
+    private string? _forestCompassImage;
 
     [ObservableProperty]
-    private string _forestKeyImage;
+    private string? _forestKeyImage;
 
     [ObservableProperty]
-    private string _forestBkImage;
+    private string? _forestBkImage;
 
     [ObservableProperty]
-    private string _fireMapImage;
+    private string? _fireMapImage;
 
     [ObservableProperty]
-    private string _fireCompassImage;
+    private string? _fireCompassImage;
 
     [ObservableProperty]
-    private string _fireKeyImage;
+    private string? _fireKeyImage;
 
     [ObservableProperty]
-    private string _fireBkImage;
+    private string? _fireBkImage;
 
     [ObservableProperty]
-    private string _waterMapImage;
+    private string? _waterMapImage;
 
     [ObservableProperty]
-    private string _waterCompassImage;
+    private string? _waterCompassImage;
 
     [ObservableProperty]
-    private string _waterKeyImage;
+    private string? _waterKeyImage;
 
     [ObservableProperty]
-    private string _waterBkImage;
+    private string? _waterBkImage;
 
     [ObservableProperty]
-    private string _shadowMapImage;
+    private string? _shadowMapImage;
 
     [ObservableProperty]
-    private string _shadowCompassImage;
+    private string? _shadowCompassImage;
 
     [ObservableProperty]
-    private string _shadowKeyImage;
+    private string? _shadowKeyImage;
 
     [ObservableProperty]
-    private string _shadowBkImage;
+    private string? _shadowBkImage;
 
     [ObservableProperty]
-    private string _spiritMapImage;
+    private string? _spiritMapImage;
 
     [ObservableProperty]
-    private string _spiritCompassImage;
+    private string? _spiritCompassImage;
 
     [ObservableProperty]
-    private string _spiritKeyImage;
+    private string? _spiritKeyImage;
 
     [ObservableProperty]
-    private string _spiritBkImage;
+    private string? _spiritBkImage;
 
     [ObservableProperty]
-    private string _cavernMapImage;
+    private string? _cavernMapImage;
 
     [ObservableProperty]
-    private string _cavernCompassImage;
+    private string? _cavernCompassImage;
 
     [ObservableProperty]
-    private string _bottomMapImage;
+    private string? _bottomMapImage;
 
     [ObservableProperty]
-    private string _bottomCompassImage;
+    private string? _bottomCompassImage;
 
     [ObservableProperty]
-    private string _bottomKeyImage;
+    private string? _bottomKeyImage;
 
     [ObservableProperty] 
-    private string _ganonCompassImage;
+    private string? _ganonCompassImage;
 
     [ObservableProperty]
-    private string _ganonKeyImage;
+    private string? _ganonKeyImage;
 
     [ObservableProperty]
-    private string _ganonBkImage;
+    private string? _ganonBkImage;
     
     [ObservableProperty]
-    private string _gtgKeyImage;
+    private string? _gtgKeyImage;
     
     [ObservableProperty]
-    private string _itemBackground;
+    private string? _itemBackground;
 
     [ObservableProperty] 
-    private string _gearBackground;
+    private string? _gearBackground;
 
     [ObservableProperty]
-    private string _dungeonBackground;
+    private string? _dungeonBackground;
 
     [ObservableProperty]
-    private string _questBackground;
+    private string? _questBackground;
 }

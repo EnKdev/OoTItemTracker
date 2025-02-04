@@ -27,12 +27,12 @@
             <!-- Quest Progress -->
             <Image Source="{Binding TrackerProperties.ShardImage}" Width="45" Margin="-335, -215, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleOtherCommand}" CommandParameter="Othr_Shard"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleOtherCommand}" CommandParameter="Other_Shard"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GerudoTokenImage}" Width="45" Margin="-210, -215, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleOtherCommand}" CommandParameter="Othr_Token"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleOtherCommand}" CommandParameter="Other_Token"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GsImage}" Width="45" Margin="-335, -90, 0, 0">
@@ -45,117 +45,117 @@
             <!-- Medallions and Stones -->
             <Image Source="{Binding TrackerProperties.LightMedallionImage}" Width="40" Margin="257, -165, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_LghtMd"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_LghtMd"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_LightMedallion"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_LightMedallion"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ForestMedallionImage}" Width="40" Margin="345, -115, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_FrstMd"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_FrstMd"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_ForestMedallion"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_ForestMedallion"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FireMedallionImage}" Width="40" Margin="345, -15, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_FrMd"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_FrMd"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_FireMedallion"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_FireMedallion"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.WaterMedallionImage}" Width="40" Margin="258, 35, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_WtrMd"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_WtrMd"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_WaterMedallion"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_WaterMedallion"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SpiritMedallionImage}" Width="40" Margin="170, -15, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_SprtMd"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_SprtMd"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_SpiritMedallion"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_SpiritMedallion"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ShadowMedallionImage}" Width="40" Margin="170, -115, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Adult_ShdwMd"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Adult_ShdwMd"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_ShadowMedallion"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_ShadowMedallion"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.KokiriEmeraldImage}" Width="40" Margin="165, 205, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Child_Emerald"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Child_Emerald"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_KokiriEmerald"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_KokiriEmerald"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GoronRubyImage}" Width="40" Margin="258, 205, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Child_Ruby"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Child_Ruby"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_GoronRuby"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_GoronRuby"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ZoraSapphireImage}" Width="40" Margin="345, 205, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Child_Sapphire"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Child_Sapphire"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleQuestCommand}" CommandParameter="Progression_ZorasSapphire"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding SetLocationCommand}" CommandParameter="Progression_ZorasSapphire"/>
                 </Image.InputBindings>
             </Image>
             <!-- Songs -->
             <Image Source="{Binding TrackerProperties.LullabyImage}" Width="50" Margin="-335, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Lul"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Lullaby"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.EponaImage}" Width="50" Margin="-335, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Epo"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Epona"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SariaImage}" Width="50" Margin="-335, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Sar"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Saria"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SunsImage}" Width="50" Margin="-225, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Sun"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Suns"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SotImage}" Width="50" Margin="-225, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_SoT"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Time"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SosImage}" Width="50" Margin="-225, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_SoS"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Storms"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MinuetImage}" Width="50" Margin="-115, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Min"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Minuet"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BoleroImage}" Width="50" Margin="-115, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Bol"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Bolero"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SerenadeImage}" Width="50" Margin="-115, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Ser"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Serenade"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.RequiemImage}" Width="50" Margin="-5, 125, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Req"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Requiem"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.NocturneImage}" Width="50" Margin="-5, 190, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Noc"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Nocturne"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.PreludeImage}" Width="50" Margin="-5, 255, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Sng_Pre"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSongCommand}" CommandParameter="Song_Prelude"/>
                 </Image.InputBindings>
             </Image>
             <!-- Location Infos -->
@@ -188,73 +188,88 @@
             <!-- Swords -->
             <Image Source="{Binding TrackerProperties.KokiriSwordImage}" Width="60" Margin="-70, -230, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Sword1"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Sword_Kokiri"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MasterSwordImage}" Width="60" Margin="80, -230, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Sword2"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Sword_Master"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BiggoronSwordImage}" Width="60" Margin="240, -230, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Sword3"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Sword_Biggoron"/>
                 </Image.InputBindings>
             </Image>
             <!-- Shields -->
             <Image Source="{Binding TrackerProperties.DekuShieldImage}" Width="55" Margin="-70, -80, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Shield1"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Shield_Deku"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.HylianShieldImage}" Width="55" Margin="80, -80, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Shield2"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Shield_Hylian"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MirrorShieldImage}" Width="55" Margin="240, -80, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Shield3"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Shield_Mirror"/>
                 </Image.InputBindings>
             </Image>
             <!-- Tunics -->
             <Image Source="{Binding TrackerProperties.KokiriTunicImage}" Width="60" Margin="-70, 75, 0, 0"/>
             <Image Source="{Binding TrackerProperties.GoronTunicImage}" Width="60" Margin="80, 75, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Tunic2"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Tunic_Goron"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ZoraTunicImage}" Width="60" Margin="240, 75, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Tunic3"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Tunic_Zora"/>
                 </Image.InputBindings>
             </Image>
             <!-- Boots -->
             <Image Source="{Binding TrackerProperties.KokiriBootsImage}" Width="60" Margin="-70, 220, 0, 0"/>
             <Image Source="{Binding TrackerProperties.IronBootsImage}" Width="60" Margin="80, 220, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Boots2"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Boots_Iron"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.HoverBootsImage}" Width="60" Margin="240, 220, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Eqp_Boots3"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleEquipCommand}" CommandParameter="Equip_Boots_Hover"/>
                 </Image.InputBindings>
             </Image>
             <!-- Upgradeables -->
-            <Image Source="{Binding TrackerProperties.BulletImage}" Width="50" Margin="-330, -220, 0, 0"/>
-            <Image Source="{Binding TrackerProperties.BombImage}" Width="50" Margin="-333, -110, 0, 0"/>
-            <Image Source="{Binding TrackerProperties.QuiverImage}" Width="50" Margin="-333, 0, 0, 0"/>
+            <Image Source="{Binding TrackerProperties.BulletImage}" Width="50" Margin="-330, -220, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeBulletBagCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeBulletBagCommand}" CommandParameter="false"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding TrackerProperties.BombImage}" Width="50" Margin="-333, -110, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeBombBagCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeBombBagCommand}" CommandParameter="false"/>
+                </Image.InputBindings>
+            </Image>
+            <Image Source="{Binding TrackerProperties.QuiverImage}" Width="50" Margin="-333, 0, 0, 0">
+                <Image.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeQuiverCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeQuiverCommand}" CommandParameter="false"/>
+                </Image.InputBindings>
+            </Image>
             <Image Source="{Binding TrackerProperties.StrengthImage}" Width="50" Margin="-330, 110, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeStrengthCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DowngradeStrengthCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeStrengthCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeStrengthCommand}" CommandParameter="false"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ScaleImage}" Width="50" Margin="-335, 220, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeScaleCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DowngradeScaleCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeScaleCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeScaleCommand}" CommandParameter="false"/>
                 </Image.InputBindings>
             </Image>
         </Grid>
@@ -263,129 +278,129 @@
             <!-- Item Row 1 -->
             <Image Source="{Binding TrackerProperties.StickImage}" Width="50" Margin="-345, -235, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleStickCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_DekuStick"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.NutImage}" Width="50" Margin="-215, -235, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleNutCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_DekuNuts"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BombItemImage}" Width="50" Margin="-80, -235, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBombCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Bomb"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BowImage}" Width="50" Margin="55, -235, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBowCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Bow"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FireArrowImage}" Width="50" Margin="200, -235, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleFireArrowCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleArrowCommand}" CommandParameter="Arrow_Fire"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.DinsFireImage}" Width="50" Margin="330, -235, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleDinsCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_DinsFire"/>
                 </Image.InputBindings>
             </Image>
             <!-- Item Row 2 -->
             <Image Source="{Binding TrackerProperties.SlingshotImage}" Width="50" Margin="-345, -65, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleSlingshotCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Slingshot"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.OcarinaImage}" Width="50" Margin="-215, -65, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding UpgradeOcarinaCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DowngradeOcarinaCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeOcarinaCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeOcarinaCommand}" CommandParameter="false"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BombchuImage}" Width="50" Margin="-80, -65, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBombchuCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Bombchu"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.HookshotImage}" Width="50" Margin="55, -65, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseHookshotCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding DecreaseHookshotCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeHookshotCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeHookshotCommand}" CommandParameter="false"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.IceArrowImage}" Width="50" Margin="200, -65, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleIceArrowCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleArrowCommand}" CommandParameter="Arrow_Ice"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FaroresWindImage}" Width="50" Margin="330, -65, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleFaroreCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_FaroresWind"/>
                 </Image.InputBindings>
             </Image>
             <!-- Item Row 3 -->
             <Image Source="{Binding TrackerProperties.BoomerangImage}" Width="50" Margin="-345, 105, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBoomerangCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Boomerang"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.LensImage}" Width="50" Margin="-215, 105, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleLensCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Lens"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MagicBeansImage}" Width="50" Margin="-80, 105, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBeansCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_MagicBeans"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.MegatonHammerImage}" Width="50" Margin="55, 105, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleHammerCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_Hammer"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.LightArrowImage}" Width="50" Margin="200, 105, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleLightArrowCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleArrowCommand}" CommandParameter="Arrow_Light"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.NayrusLoveImage}" Width="50" Margin="330, 105, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleNayruCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleItemCommand}" CommandParameter="Item_NayrusLove"/>
                 </Image.InputBindings>
             </Image>
             <!-- Item Row 4 -->
             <Image Source="{Binding TrackerProperties.Bottle1Image}" Width="50" Margin="-350, 245, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="1"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="Bottle1"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.Bottle2Image}" Width="50" Margin="-215, 245, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="2"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="Bottle2"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.Bottle3Image}" Width="50" Margin="-85, 245, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="3"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="Bottle3"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.Bottle4Image}" Width="50" Margin="50, 245, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="4"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBottleCommand}" CommandParameter="Bottle4"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ChildTradeItemImage}" Width="50" Margin="200, 245, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ProgressChildTradeCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding RegressChildTradeCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeChildTradeCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeChildTradeCommand}" CommandParameter="false"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.AdultTradeItemImage}" Width="50" Margin="330, 245, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ProgressAdultTradeCommand}"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding RegressAdultTradeCommand}"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ChangeAdultTradeCommand}" CommandParameter="true"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ChangeAdultTradeCommand}" CommandParameter="false"/>
                 </Image.InputBindings>
             </Image>
         </Grid>
@@ -405,198 +420,206 @@
             <TextBlock Text="{Binding TrackerProperties.DungeonType11}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-140, 1025, 0, 0"/>
             <TextBlock Text="{Binding TrackerProperties.DungeonType12}" Panel.ZIndex="1" TextAlignment="Left" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="105, 1025, 0, 0"/>
             <!-- Key Counts -->
+            <TextBlock Text="{Binding TrackerProperties.ForestKeyCount}" Foreground="{Binding TrackerProperties.ForestKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75, -262, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.FireKeyCount}" Foreground="{Binding TrackerProperties.FireKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75, -80, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.WaterKeyCount}" Foreground="{Binding TrackerProperties.WaterKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75, 95, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.ShadowKeyCount}" Foreground="{Binding TrackerProperties.ShadowKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75, 274, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.SpiritKeyCount}" Foreground="{Binding TrackerProperties.SpiritKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75, 461, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.BottomKeyCount}" Foreground="{Binding TrackerProperties.BottomKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="120, 645, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.GtgKeyCount}" Foreground="{Binding TrackerProperties.GtgKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-115, 985, 0, 0"/>
+            <TextBlock Text="{Binding TrackerProperties.GanonKeyCount}" Foreground="{Binding TrackerProperties.GanonKeyColor}" Panel.ZIndex="1" TextAlignment="Center" Width="80" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="85, 985, 0, 0"/>
             <!-- Maps and Compasses -->
             <Image Source="{Binding TrackerProperties.DekuMapImage}" Width="50" Margin="-47, -850, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="deku"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Deku"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.DekuCompassImage}" Width="50" Margin="50, -850, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="deku"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="deku"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Deku"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Deku"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.DcMapImage}" Width="50" Margin="-47, -665, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="dc"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_DC"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.DcCompassImage}" Width="50" Margin="50, -665, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="dc"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="dc"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_DC"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_DC"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.JabuMapImage}" Width="50" Margin="-47, -480, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="jabu"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Jabu"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.JabuCompassImage}" Width="50" Margin="50, -480, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="jabu"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="jabu"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Jabu"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Jabu"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.ForestMapImage}" Width="50" Margin="-145, -288, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="frst"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Forest"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ForestCompassImage}" Width="50" Margin="-47, -288, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="frst"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="frst"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Forest"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Forest"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ForestKeyImage}" Width="50" Margin="50, -288, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="frst"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Forest"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ForestBkImage}" Width="50" Margin="148, -288, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="frst"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="Dungeon_Forest"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.FireMapImage}" Width="50" Margin="-145, -107, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="fire"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Fire"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FireCompassImage}" Width="50" Margin="-47, -107, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="fire"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="fire"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Fire"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Fire"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FireKeyImage}" Width="50" Margin="50, -107, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="fire"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Fire"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.FireBkImage}" Width="50" Margin="148, -107, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="fire"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="Dungeon_Fire"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.WaterMapImage}" Width="50" Margin="-145, 70, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="wtr"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Water"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.WaterCompassImage}" Width="50" Margin="-47, 70, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="wtr"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="wtr"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Water"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Water"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.WaterKeyImage}" Width="50" Margin="50, 70, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="wtr"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Water"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.WaterBkImage}" Width="50" Margin="148, 70, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="wtr"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="Dungeon_Water"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.ShadowMapImage}" Width="50" Margin="-145, 248, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="shdw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Shadow"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ShadowCompassImage}" Width="50" Margin="-47, 248, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="shdw"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="shdw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Shadow"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Shadow"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ShadowKeyImage}" Width="50" Margin="50, 248, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="shdw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Shadow"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.ShadowBkImage}" Width="50" Margin="148, 248, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="shdw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="Dungeon_Shadow"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.SpiritMapImage}" Width="50" Margin="-145, 434, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="sprt"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Spirit"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SpiritCompassImage}" Width="50" Margin="-47, 434, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="sprt"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="sprt"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Spirit"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Spirit"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SpiritKeyImage}" Width="50" Margin="50, 434, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="sprt"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Spirit"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.SpiritBkImage}" Width="50" Margin="148, 434, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="sprt"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="Dungeon_Spirit"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.BottomMapImage}" Width="50" Margin="-101, 621, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="botw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Bottom"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BottomCompassImage}" Width="50" Margin="-2, 621, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="botw"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="botw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Bottom"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Bottom"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.BottomKeyImage}" Width="50" Margin="95, 621, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="botw"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Bottom"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.CavernMapImage}" Width="50" Margin="-47, 798, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="ice"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleMapCommand}" CommandParameter="Dungeon_Cavern"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.CavernCompassImage}" Width="50" Margin="50, 798, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="ice"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="ice"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleCompassCommand}" CommandParameter="Dungeon_Cavern"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Cavern"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.GtgKeyImage}" Width="50" Margin="-142, 960, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="gtg"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="gtg"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Training"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Training"/>
                 </Image.InputBindings>
             </Image>
             <!---->
             <Image Source="{Binding TrackerProperties.GanonKeyImage}" Width="50" Margin="57, 960, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding IncreaseKeyCountAndToggleKeyCommand}" CommandParameter="ganon"/>
-                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="ganon"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding HandleKeysCommand}" CommandParameter="Dungeon_Ganon"/>
+                    <MouseBinding Gesture="RightClick" Command="{Binding ToggleDungeonStateCommand}" CommandParameter="Dungeon_Ganon"/>
                 </Image.InputBindings>
             </Image>
             <Image Source="{Binding TrackerProperties.GanonBkImage}" Width="50" Margin="155, 960, 0, 0">
                 <Image.InputBindings>
-                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="ganon"/>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ToggleBossKeyCommand}" CommandParameter="Dungeon_Ganon"/>
                 </Image.InputBindings>
             </Image>
         </Grid>

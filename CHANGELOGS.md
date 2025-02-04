@@ -118,6 +118,10 @@
 - More services
 - Switch to .NET 9
 
+3.0.0-build.6+1bab039
+- Finished refactoring and re-implementing most of the things.
+- This concludes the alpha phase of 3.0.0
+
 # Important notice:<br/>
 Previous made `trackerState` files from V2.0.0 are incompatible with V3.0.0.<br/>
 This is due to a major change of how data is represented internally.
